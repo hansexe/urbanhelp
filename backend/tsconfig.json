@@ -1,0 +1,90 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2021",
+    "lib": [
+      "ES2021"
+    ],
+    "declaration": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "noImplicitAny": false,
+    "strictPropertyInitialization": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@modules/*": [
+        "./modules/*"
+      ],
+      "@common/*": [
+        "./common/*"
+      ],
+      "@config/*": [
+        "./config/*"
+      ],
+      "@entities/*": [
+        "./common/entities/*"
+      ],
+      "@dtos/*": [
+        "./dtos/*"
+      ],
+      "@services/*": [
+        "./services/*"
+      ],
+      "@controllers/*": [
+        "./controllers/*"
+      ],
+      "@guards/*": [
+        "./common/guards/*"
+      ],
+      "@decorators/*": [
+        "./common/decorators/*"
+      ],
+      "@filters/*": [
+        "./common/filters/*"
+      ],
+      "@interceptors/*": [
+        "./common/interceptors/*"
+      ],
+      "@middlewares/*": [
+        "./common/middlewares/*"
+      ],
+      "@pipes/*": [
+        "./common/pipes/*"
+      ],
+      "@utils/*": [
+        "./common/utils/*"
+      ],
+      "@enums/*": [
+        "./common/enums/*"
+      ]
+    },
+    "allowJs": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "test",
+    "**/*spec.ts",
+    "**/TIER*.ts",
+    "src/notifications/**",
+    "**/*-reference.ts",
+    "**/*CODEBASE*.ts",
+    "**/*CRITICAL_FIX*.ts"
+  ]
+}

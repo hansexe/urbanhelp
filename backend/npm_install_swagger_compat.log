@@ -1,0 +1,4 @@
+npm error code ETARGET
+npm error notarget No matching version found for @nestjs/swagger@10.
+npm error notarget In most cases you or one of your dependencies are requesting a package version that doesn't exist.
+npm error A complete log of this run can be found in: /Users/himanshuchauhan/.npm/_logs/2026-06-24T10_06_01_271Z-debug-0.log

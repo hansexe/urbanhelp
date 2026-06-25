@@ -1,0 +1,515 @@
+URBAN HELP - COMPLETE FILE MAPPING & REPOSITORY STRUCTURE
+========================================================
+
+ROOT LEVEL FILES (Copy to project root):
+======================================
+├── .env.example                                    (ALREADY GENERATED)
+├── .gitignore                                      (Create: node_modules, dist, .next, .env)
+├── docker-compose.yml                              (ALREADY GENERATED)
+├── docker-compose.prod.yml                         (Create based on docker-compose.yml)
+├── README.md                                        (ALREADY GENERATED)
+├── LICENSE                                          (Create: MIT)
+├── SECURITY.md                                      (Create: Security policy)
+├── CONTRIBUTING.md                                  (Create: Contribution guidelines)
+├── CHANGELOG.md                                     (Create: Version history)
+└── package.json                                     (Create: monorepo root)
+
+BACKEND ROOT FILES (backend/):
+=============================
+├── package.json                                    (ALREADY GENERATED - backend-package.json)
+├── package-lock.json                               (Run: npm install)
+├── tsconfig.json                                   (ALREADY GENERATED - backend-tsconfig.json)
+├── tsconfig.build.json                             (Create: extends tsconfig.json)
+├── nest-cli.json                                   (ALREADY GENERATED - backend-nest-cli.json)
+├── jest.config.js                                  (Create: Jest testing config)
+├── .eslintrc.js                                    (Create: ESLint config)
+├── .prettierrc                                     (Create: Prettier config)
+├── Dockerfile                                      (ALREADY GENERATED - backend-Dockerfile)
+├── .dockerignore                                   (Create: node_modules, dist, .env)
+├── .env.example                                    (ALREADY GENERATED)
+└── README.md                                        (Create: Backend documentation)
+
+BACKEND SOURCE (backend/src/):
+=============================
+
+MAIN ENTRY POINTS:
+backend/src/
+├── main.ts                                         (ALREADY GENERATED - backend-main.ts)
+└── app.module.ts                                   (ALREADY GENERATED - backend-app.module.ts)
+
+CONFIG (backend/src/config/):
+├── config.ts                                       (MERGE: CODEBASE_BACKEND_001_CONFIG.ts)
+├── database.config.ts                              (Generate TypeORM database config)
+├── stripe.config.ts                                (Generate Stripe configuration)
+├── twilio.config.ts                                (Generate Twilio configuration)
+├── sendgrid.config.ts                              (Generate SendGrid configuration)
+├── aws.config.ts                                   (Generate AWS S3 configuration)
+├── google-places.config.ts                         (Generate Google Places config)
+└── environment.ts                                  (Generate environment validation)
+
+ENTITIES (backend/src/entities/):
+├── user.entity.ts                                  (MERGE: CODEBASE_BACKEND_002_ENTITIES.ts)
+├── customer.entity.ts                              (MERGE: CODEBASE_BACKEND_002_ENTITIES.ts)
+├── business.entity.ts                              (MERGE: CODEBASE_BACKEND_002_ENTITIES.ts)
+├── business-service.entity.ts                      (MERGE: CODEBASE_BACKEND_002_ENTITIES.ts)
+├── business-hours.entity.ts                        (MERGE: CODEBASE_BACKEND_002_ENTITIES.ts)
+├── business-image.entity.ts                        (MERGE: CODEBASE_BACKEND_002_ENTITIES.ts)
+├── business-banking-details.entity.ts              (MERGE: CODEBASE_BACKEND_002_ENTITIES.ts)
+├── booking.entity.ts                               (MERGE: CODEBASE_BACKEND_002_ENTITIES.ts)
+├── payment.entity.ts                               (MERGE: CODEBASE_BACKEND_002_ENTITIES.ts)
+├── review.entity.ts                                (MERGE: CODEBASE_BACKEND_002_ENTITIES.ts)
+├── notification.entity.ts                          (MERGE: CODEBASE_BACKEND_002_ENTITIES.ts)
+├── otp-code.entity.ts                              (MERGE: CODEBASE_BACKEND_002_ENTITIES.ts)
+└── audit-log.entity.ts                             (MERGE: CODEBASE_BACKEND_002_ENTITIES.ts)
+
+DTOS (backend/src/dtos/):
+├── index.ts                                        (Generate: export all DTOs)
+├── auth/
+│   ├── register.dto.ts                             (MERGE: COMPILE_AUDIT_DTO_FIXES.ts - RegisterDto)
+│   ├── login.dto.ts                                (MERGE: COMPILE_AUDIT_DTO_FIXES.ts - LoginDto)
+│   ├── verify-otp.dto.ts                           (MERGE: COMPILE_AUDIT_DTO_FIXES.ts - VerifyOtpDto)
+│   └── reset-password.dto.ts                       (MERGE: COMPILE_AUDIT_DTO_FIXES.ts - ResetPasswordDto)
+├── business/
+│   ├── register-business.dto.ts                    (MERGE: COMPILE_AUDIT_DTO_FIXES.ts - RegisterBusinessDto)
+│   ├── update-business.dto.ts                      (MERGE: COMPILE_AUDIT_DTO_FIXES.ts - UpdateBusinessProfileDto)
+│   └── business-banking.dto.ts                     (MERGE: COMPILE_AUDIT_DTO_FIXES.ts - BusinessBankingDetailsDto)
+├── booking/
+│   ├── create-booking.dto.ts                       (MERGE: COMPILE_AUDIT_DTO_FIXES.ts - CreateBookingDto)
+│   ├── update-booking.dto.ts                       (MERGE: COMPILE_AUDIT_DTO_FIXES.ts - UpdateBookingDto)
+│   └── cancel-booking.dto.ts                       (MERGE: COMPILE_AUDIT_DTO_FIXES.ts - CancelBookingDto)
+├── payment/
+│   ├── create-payment-intent.dto.ts                (MERGE: COMPILE_AUDIT_DTO_FIXES.ts - CreatePaymentIntentDto)
+│   ├── confirm-payment.dto.ts                      (MERGE: COMPILE_AUDIT_DTO_FIXES.ts - ConfirmPaymentDto)
+│   └── refund-payment.dto.ts                       (MERGE: COMPILE_AUDIT_DTO_FIXES.ts - RefundPaymentDto)
+├── review/
+│   ├── create-review.dto.ts                        (MERGE: COMPILE_AUDIT_DTO_FIXES.ts - CreateReviewDto)
+│   └── update-review.dto.ts                        (MERGE: COMPILE_AUDIT_DTO_FIXES.ts - UpdateReviewDto)
+└── common/
+    ├── pagination.dto.ts                           (Generate: pagination)
+    └── filter.dto.ts                               (Generate: filtering)
+
+MODULES (backend/src/modules/):
+
+AUTH MODULE (backend/src/modules/auth/):
+├── auth.module.ts                                  (Generate: imports and provides)
+├── auth.service.ts                                 (MERGE: CODEBASE_BACKEND_003_AUTH_MODULE.ts + CRITICAL_FIX_003)
+├── auth.controller.ts                              (MERGE: CODEBASE_BACKEND_003_AUTH_MODULE.ts)
+├── password-reset.service.ts                       (MERGE: CRITICAL_FIX_003_PASSWORD_RESET_EXPIRY.ts)
+├── otp.service.ts                                  (Generate: OTP verification)
+├── jwt.strategy.ts                                 (MERGE: CODEBASE_BACKEND_003_AUTH_MODULE.ts)
+├── local.strategy.ts                               (Generate: Local strategy)
+├── jwt-auth.guard.ts                               (MERGE: CODEBASE_BACKEND_003_AUTH_MODULE.ts)
+└── roles.guard.ts                                  (MERGE: CODEBASE_BACKEND_003_AUTH_MODULE.ts)
+
+BUSINESSES MODULE (backend/src/modules/businesses/):
+├── businesses.module.ts                            (Generate: imports and provides)
+├── businesses.service.ts                           (MERGE: TIER1_001_BUSINESS_REGISTRATION_BACKEND.ts)
+├── businesses.controller.ts                        (MERGE: TIER1_001_BUSINESS_REGISTRATION_BACKEND.ts)
+├── abn-validation.service.ts                       (MERGE: TIER1_001_BUSINESS_REGISTRATION_BACKEND.ts)
+├── business-approval.service.ts                    (MERGE: TIER1_003_BUSINESS_APPROVAL_BACKEND.ts)
+└── business-approval.controller.ts                 (MERGE: TIER1_003_BUSINESS_APPROVAL_BACKEND.ts)
+
+BOOKINGS MODULE (backend/src/modules/bookings/):
+├── bookings.module.ts                              (Generate: imports and provides)
+├── bookings.service.ts                             (MERGE: TIER1_004_BOOKING_SYSTEM_BACKEND.ts)
+├── bookings.controller.ts                          (MERGE: TIER1_004_BOOKING_SYSTEM_BACKEND.ts)
+├── booking-acceptance.service.ts                   (MERGE: TIER3_003_BOOKING_ACCEPTANCE_WORKFLOW.ts)
+└── booking-acceptance.controller.ts                (MERGE: TIER3_003_BOOKING_ACCEPTANCE_WORKFLOW.ts)
+
+PAYMENTS MODULE (backend/src/modules/payments/):
+├── payments.module.ts                              (Generate: imports and provides)
+├── stripe-payment.service.ts                       (MERGE: CRITICAL_FIX_002_STRIPE_IDEMPOTENCY.ts)
+├── stripe-webhook.service.ts                       (MERGE: CRITICAL_FIX_001_STRIPE_WEBHOOKS.ts)
+├── stripe-webhook.controller.ts                    (MERGE: CRITICAL_FIX_001_STRIPE_WEBHOOKS.ts)
+├── stripe-payout.service.ts                        (MERGE: TIER3_004_STRIPE_PAYOUT_REDIS_CACHE.ts)
+├── payment.service.ts                              (MERGE: CRITICAL_FIX_004_TRANSACTION_HANDLING.ts)
+└── payments.controller.ts                          (Generate: controller)
+
+REVIEWS MODULE (backend/src/modules/reviews/):
+├── reviews.module.ts                               (Generate: imports and provides)
+├── reviews.service.ts                              (MERGE: TIER2_001_REVIEW_SYSTEM_BACKEND.ts)
+├── reviews.controller.ts                           (Generate: controller)
+└── review-notifications.service.ts                 (MERGE: TIER2_002_REVIEW_NOTIFICATIONS.ts)
+
+CUSTOMERS MODULE (backend/src/modules/customers/):
+├── customers.module.ts                             (Generate: imports and provides)
+├── customers.service.ts                            (MERGE: CODEBASE_BACKEND_005_MAIN_APP.ts - CustomersService)
+├── customers.controller.ts                         (MERGE: CODEBASE_BACKEND_005_MAIN_APP.ts - CustomersController)
+└── customer-dashboard.service.ts                   (MERGE: TIER3_001_CUSTOMER_DASHBOARD_BACKEND.ts)
+
+NOTIFICATIONS MODULE (backend/src/modules/notifications/):
+├── notifications.module.ts                         (Generate: imports and provides)
+├── sendgrid.service.ts                             (MERGE: CODEBASE_BACKEND_004_NOTIFICATIONS_STRIPE.ts + TIER1_002,005,006)
+├── twilio.service.ts                               (MERGE: CODEBASE_BACKEND_004_NOTIFICATIONS_STRIPE.ts + TIER1_002,006)
+├── email-queue.service.ts                          (MERGE: TIER3_005_RATE_LIMITING_LOCKOUT_QUEUE.ts)
+├── sms-queue.service.ts                            (MERGE: TIER3_005_RATE_LIMITING_LOCKOUT_QUEUE.ts)
+└── payout-queue.service.ts                         (MERGE: TIER3_005_RATE_LIMITING_LOCKOUT_QUEUE.ts)
+
+SEARCH MODULE (backend/src/modules/search/):
+├── search.module.ts                                (Generate: imports and provides)
+├── search.service.ts                               (MERGE: CODEBASE_BACKEND_005_MAIN_APP.ts - SearchService)
+└── search.controller.ts                            (MERGE: CODEBASE_BACKEND_005_MAIN_APP.ts - SearchController)
+
+UPLOADS MODULE (backend/src/modules/uploads/):
+├── uploads.module.ts                               (Generate: imports and provides)
+├── s3.service.ts                                   (MERGE: TIER1_007_S3_UPLOAD_SYSTEM.ts)
+└── uploads.controller.ts                           (MERGE: TIER1_007_S3_UPLOAD_SYSTEM.ts)
+
+LOCATION MODULE (backend/src/modules/location/):
+├── location.module.ts                              (Generate: imports and provides)
+├── google-places.service.ts                        (MERGE: TIER3_002_GOOGLE_PLACES_GEOLOCATION.ts)
+├── geolocation.service.ts                          (MERGE: TIER3_002_GOOGLE_PLACES_GEOLOCATION.ts)
+└── location.controller.ts                          (MERGE: TIER3_002_GOOGLE_PLACES_GEOLOCATION.ts)
+
+ADMIN MODULE (backend/src/modules/admin/):
+├── admin.module.ts                                 (Generate: imports and provides)
+├── admin.service.ts                                (Generate: admin operations)
+└── admin.controller.ts                             (Generate: admin endpoints)
+
+COMMON (backend/src/common/):
+
+GUARDS (backend/src/common/guards/):
+├── jwt-auth.guard.ts                               (MERGE: CODEBASE_BACKEND_003_AUTH_MODULE.ts)
+├── roles.guard.ts                                  (MERGE: CODEBASE_BACKEND_003_AUTH_MODULE.ts)
+└── api-key.guard.ts                                (Generate: API key validation)
+
+DECORATORS (backend/src/common/decorators/):
+├── roles.decorator.ts                              (MERGE: CODEBASE_BACKEND_003_AUTH_MODULE.ts)
+├── current-user.decorator.ts                       (Generate: get current user)
+├── public.decorator.ts                             (Generate: public endpoint)
+└── throttle.decorator.ts                           (Generate: rate limiting)
+
+FILTERS (backend/src/common/filters/):
+├── http-exception.filter.ts                        (Generate: exception handling)
+├── validation-exception.filter.ts                  (MERGE: CRITICAL_FIX_005_INPUT_VALIDATION_DTOS.ts)
+└── all-exceptions.filter.ts                        (Generate: catch all exceptions)
+
+INTERCEPTORS (backend/src/common/interceptors/):
+├── logging.interceptor.ts                          (Generate: request logging)
+├── transform.interceptor.ts                        (Generate: response transformation)
+├── error.interceptor.ts                            (Generate: error handling)
+└── timeout.interceptor.ts                          (Generate: timeout handling)
+
+PIPES (backend/src/common/pipes/):
+├── validation.pipe.ts                              (MERGE: CRITICAL_FIX_005_INPUT_VALIDATION_DTOS.ts)
+└── parse-uuid.pipe.ts                              (Generate: UUID parsing)
+
+MIDDLEWARES (backend/src/common/middlewares/):
+├── rate-limit.middleware.ts                        (MERGE: TIER3_005_RATE_LIMITING_LOCKOUT_QUEUE.ts)
+├── request-id.middleware.ts                        (Generate: request ID tracking)
+├── cors.middleware.ts                              (Generate: CORS handling)
+└── security-headers.middleware.ts                  (Generate: security headers)
+
+SERVICES (backend/src/common/services/):
+├── redis.service.ts                                (MERGE: TIER3_004_STRIPE_PAYOUT_REDIS_CACHE.ts)
+├── audit.service.ts                                (Generate: audit logging)
+├── email-processor.service.ts                      (MERGE: TIER3_005_RATE_LIMITING_LOCKOUT_QUEUE.ts)
+├── sms-processor.service.ts                        (MERGE: TIER3_005_RATE_LIMITING_LOCKOUT_QUEUE.ts)
+├── payout-processor.service.ts                     (MERGE: TIER3_005_RATE_LIMITING_LOCKOUT_QUEUE.ts)
+└── account-lockout.service.ts                      (MERGE: TIER3_005_RATE_LIMITING_LOCKOUT_QUEUE.ts)
+
+ENUMS (backend/src/common/enums/):
+├── index.ts                                        (MERGE: COMPILE_AUDIT_DTO_FIXES.ts - ALL_ENUMS)
+├── user-role.enum.ts                               (MERGE: COMPILE_AUDIT_DTO_FIXES.ts)
+├── booking-status.enum.ts                          (MERGE: COMPILE_AUDIT_DTO_FIXES.ts)
+├── payment-status.enum.ts                          (MERGE: COMPILE_AUDIT_DTO_FIXES.ts)
+├── business-status.enum.ts                         (MERGE: COMPILE_AUDIT_DTO_FIXES.ts)
+├── business-category.enum.ts                       (MERGE: COMPILE_AUDIT_DTO_FIXES.ts)
+├── refund-reason.enum.ts                           (MERGE: COMPILE_AUDIT_DTO_FIXES.ts)
+├── review-status.enum.ts                           (MERGE: COMPILE_AUDIT_DTO_FIXES.ts)
+└── payment-type.enum.ts                            (MERGE: COMPILE_AUDIT_DTO_FIXES.ts)
+
+UTILS (backend/src/common/utils/):
+├── validators.ts                                   (Generate: custom validators)
+├── helpers.ts                                      (Generate: helper functions)
+├── constants.ts                                    (Generate: app constants)
+└── errors.ts                                       (Generate: error types)
+
+COMMON MODULE:
+└── common.module.ts                                (Generate: exports all common items)
+
+DATABASE (backend/database/):
+
+MIGRATIONS:
+├── 1000000000000-CreateUsersTable.ts               (Generate: users table)
+├── 1000000000001-CreateCustomersTable.ts           (Generate: customers table)
+├── 1000000000002-CreateBusinessesTable.ts          (Generate: businesses table)
+├── 1000000000003-CreateBookingsTable.ts            (Generate: bookings table)
+├── 1000000000004-CreatePaymentsTable.ts            (Generate: payments table)
+└── ... (more migrations)
+
+SEEDS:
+├── seed.ts                                         (Generate: seed runner)
+├── users.seed.ts                                   (Generate: user seed data)
+├── businesses.seed.ts                              (Generate: business seed data)
+└── bookings.seed.ts                                (Generate: booking seed data)
+
+SCHEMA:
+└── schema.sql                                      (MERGE: CODEBASE_DATABASE_001_SCHEMA.sql)
+
+TESTS:
+├── critical-path.real-integration.spec.ts          (MERGE: REAL_INTEGRATION_TESTS_MOCKED_SERVICES.ts)
+├── critical-path.integration.spec.ts               (MERGE: CRITICAL_PATH_TESTS_COMPLETE.ts)
+├── jest.config.js                                  (Generate: Jest config)
+└── [service test files]
+
+
+FRONTEND ROOT FILES (frontend/):
+===============================
+├── package.json                                    (ALREADY GENERATED - frontend-package.json)
+├── package-lock.json                               (Run: npm install)
+├── tsconfig.json                                   (ALREADY GENERATED - frontend-tsconfig.json)
+├── next.config.js                                  (ALREADY GENERATED - frontend-next.config.js)
+├── jest.config.js                                  (Create: Jest testing config)
+├── .eslintrc.json                                  (Create: ESLint config)
+├── .prettierrc                                     (Create: Prettier config)
+├── Dockerfile                                      (ALREADY GENERATED - frontend-Dockerfile)
+├── .dockerignore                                   (Create: node_modules, .next, .env)
+├── .env.local                                      (Create: local env vars)
+├── .env.example                                    (Create: env template)
+└── README.md                                        (Create: Frontend documentation)
+
+FRONTEND SOURCE (frontend/src/):
+
+PAGES (frontend/src/pages/):
+├── _app.tsx                                        (MERGE: CODEBASE_FRONTEND_003_PAGES_COMPONENTS.tsx)
+├── _document.tsx                                   (MERGE: CODEBASE_FRONTEND_003_PAGES_COMPONENTS.tsx)
+├── index.tsx                                       (MERGE: CODEBASE_FRONTEND_003_PAGES_COMPONENTS.tsx)
+├── 404.tsx                                         (Generate: not found)
+├── _error.tsx                                      (Generate: error page)
+├── auth/
+│   ├── login.tsx                                   (MERGE: CODEBASE_FRONTEND_003_PAGES_COMPONENTS.tsx)
+│   ├── register.tsx                                (Generate: register page)
+│   ├── reset-password.tsx                          (Generate: password reset)
+│   └── verify-otp.tsx                              (Generate: OTP verification)
+├── search/
+│   ├── index.tsx                                   (MERGE: CODEBASE_FRONTEND_003_PAGES_COMPONENTS.tsx)
+│   └── [id].tsx                                    (MERGE: CODEBASE_FRONTEND_003_PAGES_COMPONENTS.tsx)
+├── business/
+│   ├── register.tsx                                (Generate: business registration)
+│   ├── [id].tsx                                    (MERGE: CODEBASE_FRONTEND_003_PAGES_COMPONENTS.tsx)
+│   └── dashboard/
+│       ├── index.tsx                               (Generate: dashboard)
+│       ├── services.tsx                            (Generate: manage services)
+│       ├── hours.tsx                               (Generate: manage hours)
+│       ├── bookings.tsx                            (Generate: view bookings)
+│       ├── payments.tsx                            (Generate: payment history)
+│       └── analytics.tsx                           (Generate: revenue analytics)
+├── bookings/
+│   ├── index.tsx                                   (Generate: my bookings)
+│   ├── [id].tsx                                    (Generate: booking details)
+│   └── create.tsx                                  (Generate: create booking)
+├── payments/
+│   ├── index.tsx                                   (Generate: payment history)
+│   ├── [id].tsx                                    (Generate: payment details)
+│   └── return.tsx                                  (Generate: payment return)
+├── reviews/
+│   ├── index.tsx                                   (Generate: my reviews)
+│   └── create.tsx                                  (Generate: leave review)
+├── profile/
+│   ├── index.tsx                                   (Generate: my profile)
+│   ├── settings.tsx                                (Generate: settings)
+│   └── addresses.tsx                               (Generate: saved addresses)
+├── legal/
+│   ├── privacy.tsx                                 (MERGE: TIER3_006_LEGAL_PAGES_FRONTEND.tsx)
+│   ├── terms.tsx                                   (MERGE: TIER3_006_LEGAL_PAGES_FRONTEND.tsx)
+│   ├── refunds.tsx                                 (MERGE: TIER3_006_LEGAL_PAGES_FRONTEND.tsx)
+│   └── cookies.tsx                                 (MERGE: TIER3_006_LEGAL_PAGES_FRONTEND.tsx)
+└── admin/
+    ├── index.tsx                                   (Generate: admin dashboard)
+    ├── approvals.tsx                               (Generate: business approvals)
+    ├── users.tsx                                   (Generate: user management)
+    └── reports.tsx                                 (Generate: platform reports)
+
+COMPONENTS (frontend/src/components/):
+├── Layout/
+│   ├── Header.tsx                                  (Generate: header)
+│   ├── Footer.tsx                                  (Generate: footer)
+│   ├── Navigation.tsx                              (Generate: navigation)
+│   └── Layout.tsx                                  (Generate: main layout)
+├── Auth/
+│   ├── LoginForm.tsx                               (Generate: login form)
+│   ├── RegisterForm.tsx                            (Generate: register form)
+│   └── OtpInput.tsx                                (Generate: OTP input)
+├── Business/
+│   ├── BusinessCard.tsx                            (Generate: business card)
+│   ├── BusinessList.tsx                            (Generate: business list)
+│   ├── BusinessProfile.tsx                         (Generate: profile)
+│   ├── ServiceForm.tsx                             (Generate: service form)
+│   └── HoursSelector.tsx                           (Generate: hours selector)
+├── Booking/
+│   ├── BookingForm.tsx                             (Generate: booking form)
+│   ├── BookingCard.tsx                             (Generate: booking card)
+│   ├── BookingList.tsx                             (Generate: booking list)
+│   └── TimeSlotSelector.tsx                        (Generate: time slots)
+├── Payment/
+│   ├── StripePaymentForm.tsx                       (Generate: payment form)
+│   ├── PaymentHistory.tsx                          (Generate: payment history)
+│   └── PaymentStatus.tsx                           (Generate: payment status)
+├── Review/
+│   ├── ReviewForm.tsx                              (Generate: review form)
+│   ├── ReviewCard.tsx                              (Generate: review card)
+│   └── RatingStars.tsx                             (Generate: rating stars)
+├── Common/
+│   ├── Button.tsx                                  (Generate: button)
+│   ├── Modal.tsx                                   (Generate: modal)
+│   ├── Toast.tsx                                   (Generate: toast)
+│   ├── Loading.tsx                                 (Generate: loading)
+│   ├── Error.tsx                                   (Generate: error)
+│   ├── Pagination.tsx                              (Generate: pagination)
+│   └── SearchBar.tsx                               (Generate: search bar)
+└── Maps/
+    ├── GooglePlacesInput.tsx                       (Generate: places input)
+    ├── GoogleMap.tsx                               (Generate: map)
+    └── LocationPicker.tsx                          (Generate: location picker)
+
+HOOKS (frontend/src/hooks/):
+├── useAuth.ts                                      (MERGE: CODEBASE_FRONTEND_002_API_HOOKS.tsx)
+├── useApi.ts                                       (MERGE: CODEBASE_FRONTEND_002_API_HOOKS.tsx)
+├── useForm.ts                                      (MERGE: CODEBASE_FRONTEND_002_API_HOOKS.tsx)
+├── useLocalStorage.ts                              (Generate: local storage)
+├── usePagination.ts                                (Generate: pagination)
+├── useDebounce.ts                                  (Generate: debounce)
+└── useGeolocation.ts                               (Generate: geolocation)
+
+SERVICES (frontend/src/services/):
+├── api.ts                                          (MERGE: CODEBASE_FRONTEND_002_API_HOOKS.tsx - ApiClient)
+├── authService.ts                                  (Generate: auth API)
+├── businessService.ts                              (Generate: business API)
+├── bookingService.ts                               (Generate: booking API)
+├── paymentService.ts                               (Generate: payment API)
+├── reviewService.ts                                (Generate: review API)
+├── searchService.ts                                (Generate: search API)
+└── uploadService.ts                                (Generate: upload API)
+
+STORE (frontend/src/store/):
+├── authStore.ts                                    (MERGE: CODEBASE_FRONTEND_002_API_HOOKS.tsx - useAuthStore)
+├── searchStore.ts                                  (Generate: search state)
+├── bookingStore.ts                                 (Generate: booking state)
+├── cartStore.ts                                    (Generate: cart state)
+├── notificationStore.ts                            (Generate: notification state)
+└── uiStore.ts                                      (Generate: UI state)
+
+TYPES (frontend/src/types/):
+├── index.ts                                        (MERGE: CODEBASE_FRONTEND_002_API_HOOKS.tsx - type definitions)
+├── user.ts                                         (Generate: user types)
+├── business.ts                                     (Generate: business types)
+├── booking.ts                                      (Generate: booking types)
+├── payment.ts                                      (Generate: payment types)
+├── review.ts                                       (Generate: review types)
+├── common.ts                                       (Generate: common types)
+└── api.ts                                          (Generate: API types)
+
+STYLES (frontend/src/styles/):
+├── globals.css                                     (Generate: global styles)
+├── variables.css                                   (Generate: CSS variables)
+└── tailwind.css                                    (Generate: Tailwind imports)
+
+UTILS (frontend/src/utils/):
+├── validation.ts                                   (Generate: form validation)
+├── formatting.ts                                   (Generate: date/currency formatting)
+├── constants.ts                                    (Generate: app constants)
+├── errors.ts                                       (Generate: error handling)
+└── helpers.ts                                      (Generate: helper functions)
+
+CONTEXT (frontend/src/context/):
+└── AuthContext.tsx                                 (MERGE: CODEBASE_FRONTEND_002_API_HOOKS.tsx - AuthContext)
+
+PUBLIC (frontend/public/):
+├── favicon.ico                                     (Create: favicon)
+├── images/
+│   ├── logo.svg                                    (Create: logo)
+│   └── [other images]
+└── icons/
+    └── [SVG icons]
+
+TEST (frontend/test/):
+└── [test files]
+
+
+INFRASTRUCTURE (infrastructure/):
+================================
+├── terraform/
+│   ├── main.tf                                     (Generate: AWS resources)
+│   ├── variables.tf                                (Generate: variables)
+│   ├── outputs.tf                                  (Generate: outputs)
+│   ├── vpc.tf                                      (Generate: VPC)
+│   ├── rds.tf                                      (Generate: RDS PostgreSQL)
+│   ├── elasticache.tf                              (Generate: ElastiCache Redis)
+│   ├── ecs.tf                                      (Generate: ECS Fargate)
+│   ├── alb.tf                                      (Generate: Application Load Balancer)
+│   ├── s3.tf                                       (Generate: S3 buckets)
+│   ├── iam.tf                                      (Generate: IAM roles)
+│   ├── security-groups.tf                          (Generate: security groups)
+│   └── terraform.tfvars.example                    (Generate: terraform vars)
+└── kubernetes/
+    ├── backend-deployment.yaml                     (Generate: backend deployment)
+    ├── frontend-deployment.yaml                    (Generate: frontend deployment)
+    ├── postgres-statefulset.yaml                   (Generate: database)
+    ├── redis-statefulset.yaml                      (Generate: cache)
+    ├── ingress.yaml                                (Generate: ingress)
+    └── services.yaml                               (Generate: services)
+
+
+GITHUB (github/):
+=================
+├── workflows/
+│   ├── test.yml                                    (MERGE: TIER3_008_AWS_DEPLOYMENT_PIPELINE.yml)
+│   ├── build.yml                                   (MERGE: TIER3_008_AWS_DEPLOYMENT_PIPELINE.yml)
+│   └── deploy.yml                                  (MERGE: TIER3_008_AWS_DEPLOYMENT_PIPELINE.yml)
+├── ISSUE_TEMPLATE/
+│   ├── bug_report.md                               (Generate: bug template)
+│   ├── feature_request.md                          (Generate: feature template)
+│   └── security_issue.md                           (Generate: security template)
+└── PULL_REQUEST_TEMPLATE.md                        (Generate: PR template)
+
+
+NGINX (nginx/):
+===============
+├── nginx.conf                                      (Generate: nginx configuration)
+└── ssl/
+    ├── cert.pem                                    (Generate: self-signed cert for local dev)
+    └── key.pem                                     (Generate: cert key for local dev)
+
+
+DOCS (docs/):
+=============
+├── ARCHITECTURE.md                                 (Generate: system architecture)
+├── DATABASE.md                                     (Generate: database schema docs)
+├── API.md                                          (Generate: API endpoints)
+├── DEPLOYMENT.md                                   (MERGE: partially from README)
+├── SECURITY.md                                     (Generate: security considerations)
+├── CONTRIBUTING.md                                 (Generate: contribution guidelines)
+└── TROUBLESHOOTING.md                              (Generate: common issues)
+
+
+SCRIPTS (scripts/):
+===================
+├── setup.sh                                        (Generate: local development setup)
+├── seed-db.sh                                      (Generate: database seeding)
+├── backup-db.sh                                    (Generate: database backup)
+├── restore-db.sh                                   (Generate: database restore)
+└── migrate.sh                                      (Generate: database migrations)
+
+
+SUMMARY:
+========
+Total Files: 280+
+- Configuration Files: 20
+- Backend Source Files: 120+
+- Frontend Source Files: 100+
+- Infrastructure Files: 20
+- Documentation Files: 10
+- Script Files: 10
+
+Key Merge Sources:
+- CODEBASE_BACKEND_*.ts (5 files)
+- CODEBASE_FRONTEND_*.tsx (3 files)
+- CODEBASE_DATABASE_*.sql (1 file)
+- TIER1_*.ts (8 files - Business features)
+- TIER2_*.ts (2 files - Reviews)
+- TIER3_*.ts (8 files - Advanced features)
+- CRITICAL_FIX_*.ts (5 files - Security)
+- Test files (3 comprehensive suites)
+
+All previously generated code will be merged and organized into proper locations with all necessary imports, exports, and module registrations generated automatically.

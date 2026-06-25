@@ -1,0 +1,46 @@
+
+> urbanhelp-backend@1.0.0 start
+> nest start
+
+(node:5158) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[32m[Nest] 5163  - [39m06/25/2026, 12:34:43 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 5163  - [39m06/25/2026, 12:34:43 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +19ms[39m
+[32m[Nest] 5163  - [39m06/25/2026, 12:34:43 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mTypeOrmModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 5163  - [39m06/25/2026, 12:34:43 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRedisModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 5163  - [39m06/25/2026, 12:34:43 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mBullModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 5163  - [39m06/25/2026, 12:34:43 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 5163  - [39m06/25/2026, 12:34:43 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCacheModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 5163  - [39m06/25/2026, 12:34:43 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCacheModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 5163  - [39m06/25/2026, 12:34:43 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRedisCoreModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 5163  - [39m06/25/2026, 12:34:43 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+[31m[Nest] 5163  - [39m06/25/2026, 12:34:43 AM [31m  ERROR[39m [38;5;3m[ExceptionHandler] [39m[31mNest can't resolve dependencies of the PayoutProcessor (?). Please make sure that the argument StripePayoutService at index [0] is available in the QueueModule context.
+
+Potential solutions:
+- Is QueueModule a valid NestJS module?
+- If StripePayoutService is a provider, is it part of the current QueueModule?
+- If StripePayoutService is exported from a separate @Module, is that module imported within QueueModule?
+  @Module({
+    imports: [ /* the Module containing StripePayoutService */ ]
+  })
+[39m
+Error: Nest can't resolve dependencies of the PayoutProcessor (?). Please make sure that the argument StripePayoutService at index [0] is available in the QueueModule context.
+
+Potential solutions:
+- Is QueueModule a valid NestJS module?
+- If StripePayoutService is a provider, is it part of the current QueueModule?
+- If StripePayoutService is exported from a separate @Module, is that module imported within QueueModule?
+  @Module({
+    imports: [ /* the Module containing StripePayoutService */ ]
+  })
+
+    at Injector.lookupComponentInParentModules (/Users/himanshuchauhan/urbanhelp/backend/node_modules/@nestjs/core/injector/injector.js:254:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Injector.resolveComponentInstance (/Users/himanshuchauhan/urbanhelp/backend/node_modules/@nestjs/core/injector/injector.js:207:33)
+    at async resolveParam (/Users/himanshuchauhan/urbanhelp/backend/node_modules/@nestjs/core/injector/injector.js:128:38)
+    at async Promise.all (index 0)
+    at async Injector.resolveConstructorParams (/Users/himanshuchauhan/urbanhelp/backend/node_modules/@nestjs/core/injector/injector.js:143:27)
+    at async Injector.loadInstance (/Users/himanshuchauhan/urbanhelp/backend/node_modules/@nestjs/core/injector/injector.js:70:13)
+    at async Injector.loadProvider (/Users/himanshuchauhan/urbanhelp/backend/node_modules/@nestjs/core/injector/injector.js:97:9)
+    at async /Users/himanshuchauhan/urbanhelp/backend/node_modules/@nestjs/core/injector/instance-loader.js:56:13
+    at async Promise.all (index 7)

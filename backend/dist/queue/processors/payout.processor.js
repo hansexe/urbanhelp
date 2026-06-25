@@ -1,0 +1,52 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayoutProcessor = void 0;
+const bull_1 = require("@nestjs/bull");
+const stripe_payout_service_1 = require("../../payments/stripe-payout.service");
+let PayoutProcessor = class PayoutProcessor {
+    constructor(stripePayoutService) {
+        this.stripePayoutService = stripePayoutService;
+    }
+    async processPayout(job) {
+        if (job.data.type === 'monthly') {
+            try {
+                await this.stripePayoutService.processMonthlPayouts();
+                return { success: true, type: 'monthly' };
+            }
+            catch (error) {
+                const err = error instanceof Error ? error : new Error(String(error));
+                throw new Error(`Monthly payout processing failed: ${err.message}`);
+            }
+        }
+        const { businessId, amount, period } = job.data;
+        try {
+            // Payout processing logic
+            return { success: true, businessId, amount, period };
+        }
+        catch (error) {
+            const err = error instanceof Error ? error : new Error(String(error));
+            throw new Error(`Payout failed for business ${businessId}: ${err.message}`);
+        }
+    }
+};
+exports.PayoutProcessor = PayoutProcessor;
+__decorate([
+    (0, bull_1.Process)(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], PayoutProcessor.prototype, "processPayout", null);
+exports.PayoutProcessor = PayoutProcessor = __decorate([
+    (0, bull_1.Processor)('payout'),
+    __metadata("design:paramtypes", [stripe_payout_service_1.StripePayoutService])
+], PayoutProcessor);
+//# sourceMappingURL=payout.processor.js.map

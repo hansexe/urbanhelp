@@ -1,0 +1,75 @@
+Compiler error summary for backend (post-archive)
+
+TS code counts:
+ 195 TS2564
+  26 TS2300
+  17 TS2307
+   6 TS2565
+   3 TS2353
+   2 TS1804
+   1 TS7006
+   1 TS2339
+   1 TS2305
+
+Samples by category:
+
+Duplicate symbol errors (TS2300, TS2395, TS2440) - first 10:
+797:[96msrc/dtos/index.ts[0m:[93m4[0m:[93m22[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'BadRequestException'.
+801:[96msrc/dtos/index.ts[0m:[93m4[0m:[93m43[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'ValidationPipe'.
+805:[96msrc/dtos/index.ts[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'IsEmail'.
+809:[96msrc/dtos/index.ts[0m:[93m27[0m:[93m3[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'IsString'.
+813:[96msrc/dtos/index.ts[0m:[93m28[0m:[93m3[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'IsNotEmpty'.
+817:[96msrc/dtos/index.ts[0m:[93m29[0m:[93m3[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'Length'.
+821:[96msrc/dtos/index.ts[0m:[93m30[0m:[93m3[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'Matches'.
+825:[96msrc/dtos/index.ts[0m:[93m31[0m:[93m3[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'IsPhoneNumber'.
+829:[96msrc/dtos/index.ts[0m:[93m32[0m:[93m3[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'ValidateIf'.
+833:[96msrc/dtos/index.ts[0m:[93m33[0m:[93m3[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'IsEnum'.
+
+Missing entity/property errors (TS2339) and definite-assignment errors (TS2564) - first 20:
+97:[96msrc/common/entities/audit-log.entity.ts[0m:[93m14[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'id' has no initializer and is not definitely assigned in the constructor.
+101:[96msrc/common/entities/audit-log.entity.ts[0m:[93m17[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'action' has no initializer and is not definitely assigned in the constructor.
+105:[96msrc/common/entities/audit-log.entity.ts[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'status' has no initializer and is not definitely assigned in the constructor.
+109:[96msrc/common/entities/audit-log.entity.ts[0m:[93m29[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'created_at' has no initializer and is not definitely assigned in the constructor.
+113:[96msrc/common/entities/booking.entity.ts[0m:[93m22[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'id' has no initializer and is not definitely assigned in the constructor.
+117:[96msrc/common/entities/booking.entity.ts[0m:[93m25[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'customer_id' has no initializer and is not definitely assigned in the constructor.
+121:[96msrc/common/entities/booking.entity.ts[0m:[93m28[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'business_id' has no initializer and is not definitely assigned in the constructor.
+125:[96msrc/common/entities/booking.entity.ts[0m:[93m31[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'status' has no initializer and is not definitely assigned in the constructor.
+129:[96msrc/common/entities/booking.entity.ts[0m:[93m34[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'request_type' has no initializer and is not definitely assigned in the constructor.
+133:[96msrc/common/entities/booking.entity.ts[0m:[93m37[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'appointment_date' has no initializer and is not definitely assigned in the constructor.
+137:[96msrc/common/entities/booking.entity.ts[0m:[93m43[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'customer_name' has no initializer and is not definitely assigned in the constructor.
+141:[96msrc/common/entities/booking.entity.ts[0m:[93m46[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'customer_address' has no initializer and is not definitely assigned in the constructor.
+145:[96msrc/common/entities/booking.entity.ts[0m:[93m52[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'problem_description' has no initializer and is not definitely assigned in the constructor.
+149:[96msrc/common/entities/booking.entity.ts[0m:[93m58[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'call_out_fee' has no initializer and is not definitely assigned in the constructor.
+153:[96msrc/common/entities/booking.entity.ts[0m:[93m61[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'commission_amount' has no initializer and is not definitely assigned in the constructor.
+157:[96msrc/common/entities/booking.entity.ts[0m:[93m64[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'created_at' has no initializer and is not definitely assigned in the constructor.
+161:[96msrc/common/entities/booking.entity.ts[0m:[93m67[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'updated_at' has no initializer and is not definitely assigned in the constructor.
+165:[96msrc/common/entities/booking.entity.ts[0m:[93m77[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'customer' has no initializer and is not definitely assigned in the constructor.
+169:[96msrc/common/entities/booking.entity.ts[0m:[93m81[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'business' has no initializer and is not definitely assigned in the constructor.
+173:[96msrc/common/entities/business-banking-details.entity.ts[0m:[93m17[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'id' has no initializer and is not definitely assigned in the constructor.
+
+Missing methods (TS2339 referencing methods) - first 20:
+
+Import/module issues (TS2307) - first 20:
+9:[96msrc/app.module.ts[0m:[93m9[0m:[93m32[0m - [91merror[0m[90m TS2307: [0mCannot find module './config/database.config' or its corresponding type declarations.
+13:[96msrc/app.module.ts[0m:[93m12[0m:[93m28[0m - [91merror[0m[90m TS2307: [0mCannot find module './entities/user.entity' or its corresponding type declarations.
+17:[96msrc/app.module.ts[0m:[93m13[0m:[93m32[0m - [91merror[0m[90m TS2307: [0mCannot find module './entities/customer.entity' or its corresponding type declarations.
+21:[96msrc/app.module.ts[0m:[93m14[0m:[93m32[0m - [91merror[0m[90m TS2307: [0mCannot find module './entities/business.entity' or its corresponding type declarations.
+25:[96msrc/app.module.ts[0m:[93m15[0m:[93m39[0m - [91merror[0m[90m TS2307: [0mCannot find module './entities/business-service.entity' or its corresponding type declarations.
+29:[96msrc/app.module.ts[0m:[93m16[0m:[93m37[0m - [91merror[0m[90m TS2307: [0mCannot find module './entities/business-hours.entity' or its corresponding type declarations.
+33:[96msrc/app.module.ts[0m:[93m17[0m:[93m37[0m - [91merror[0m[90m TS2307: [0mCannot find module './entities/business-image.entity' or its corresponding type declarations.
+37:[96msrc/app.module.ts[0m:[93m18[0m:[93m46[0m - [91merror[0m[90m TS2307: [0mCannot find module './entities/business-banking-details.entity' or its corresponding type declarations.
+41:[96msrc/app.module.ts[0m:[93m19[0m:[93m31[0m - [91merror[0m[90m TS2307: [0mCannot find module './entities/booking.entity' or its corresponding type declarations.
+45:[96msrc/app.module.ts[0m:[93m20[0m:[93m31[0m - [91merror[0m[90m TS2307: [0mCannot find module './entities/payment.entity' or its corresponding type declarations.
+49:[96msrc/app.module.ts[0m:[93m21[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module './entities/review.entity' or its corresponding type declarations.
+53:[96msrc/app.module.ts[0m:[93m22[0m:[93m36[0m - [91merror[0m[90m TS2307: [0mCannot find module './entities/notification.entity' or its corresponding type declarations.
+57:[96msrc/app.module.ts[0m:[93m23[0m:[93m31[0m - [91merror[0m[90m TS2307: [0mCannot find module './entities/otp-code.entity' or its corresponding type declarations.
+61:[96msrc/app.module.ts[0m:[93m24[0m:[93m32[0m - [91merror[0m[90m TS2307: [0mCannot find module './entities/audit-log.entity' or its corresponding type declarations.
+65:[96msrc/app.module.ts[0m:[93m27[0m:[93m28[0m - [91merror[0m[90m TS2307: [0mCannot find module './modules/auth/auth.module' or its corresponding type declarations.
+69:[96msrc/app.module.ts[0m:[93m32[0m:[93m33[0m - [91merror[0m[90m TS2307: [0mCannot find module './modules/customers/customers.module' or its corresponding type declarations.
+73:[96msrc/app.module.ts[0m:[93m34[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module './modules/search/search.module' or its corresponding type declarations.
+
+Third-party typing / overload / namespace errors (TS2322, TS2694, TS2769, TS18046, TS2322) - first 30:
+789:[96msrc/common/services/audit.service.ts[0m:[93m27[0m:[93m56[0m - [91merror[0m[90m TS18046: [0m'err' is of type 'unknown'.
+793:[96msrc/common/services/audit.service.ts[0m:[93m27[0m:[93m69[0m - [91merror[0m[90m TS18046: [0m'err' is of type 'unknown'.
+
+Full log: build_archive.log

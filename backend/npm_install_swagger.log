@@ -1,0 +1,19 @@
+npm error code ERESOLVE
+npm error ERESOLVE unable to resolve dependency tree
+npm error
+npm error While resolving: urbanhelp-backend@1.0.0
+npm error Found: @nestjs/common@10.2.8
+npm error node_modules/@nestjs/common
+npm error   @nestjs/common@"10.2.8" from the root project
+npm error
+npm error Could not resolve dependency:
+npm error peer @nestjs/common@"^11.0.1" from @nestjs/swagger@11.4.4
+npm error node_modules/@nestjs/swagger
+npm error   @nestjs/swagger@"*" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry this command with --force or --legacy-peer-deps to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error /Users/himanshuchauhan/.npm/_logs/2026-06-24T10_05_43_487Z-eresolve-report.txt
+npm error A complete log of this run can be found in: /Users/himanshuchauhan/.npm/_logs/2026-06-24T10_05_43_487Z-debug-0.log

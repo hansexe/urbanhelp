@@ -1,0 +1,891 @@
+
+> urbanhelp-backend@1.0.0 prebuild
+> rimraf dist
+
+
+> urbanhelp-backend@1.0.0 build
+> nest build
+
+[96msrc/app.module.ts[0m:[93m27[0m:[93m28[0m - [91merror[0m[90m TS2307: [0mCannot find module './modules/auth/auth.module' or its corresponding type declarations.
+
+[7m27[0m import { AuthModule } from './modules/auth/auth.module';
+[7m  [0m [91m                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/app.module.ts[0m:[93m32[0m:[93m33[0m - [91merror[0m[90m TS2307: [0mCannot find module './modules/customers/customers.module' or its corresponding type declarations.
+
+[7m32[0m import { CustomersModule } from './modules/customers/customers.module';
+[7m  [0m [91m                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/app.module.ts[0m:[93m34[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module './modules/search/search.module' or its corresponding type declarations.
+
+[7m34[0m import { SearchModule } from './modules/search/search.module';
+[7m  [0m [91m                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/app.module.ts[0m:[93m90[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'config' does not exist in type 'RedisModuleOptions'.
+
+[7m90[0m       config: {
+[7m  [0m [91m      ~~~~~~[0m
+[96msrc/app.module.ts[0m:[93m94[0m:[93m25[0m - [91merror[0m[90m TS7006: [0mParameter 'times' implicitly has an 'any' type.
+
+[7m94[0m         retryStrategy: (times) => {
+[7m  [0m [91m                        ~~~~~[0m
+[96msrc/auth/dtos/auth.dto.ts[0m:[93m25[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'first_name' has no initializer and is not definitely assigned in the constructor.
+
+[7m25[0m   first_name: string;
+[7m  [0m [91m  ~~~~~~~~~~[0m
+[96msrc/auth/dtos/auth.dto.ts[0m:[93m30[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'last_name' has no initializer and is not definitely assigned in the constructor.
+
+[7m30[0m   last_name: string;
+[7m  [0m [91m  ~~~~~~~~~[0m
+[96msrc/auth/dtos/auth.dto.ts[0m:[93m40[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'password' has no initializer and is not definitely assigned in the constructor.
+
+[7m40[0m   password: string;
+[7m  [0m [91m  ~~~~~~~~[0m
+[96msrc/bookings/dtos/booking.dto.ts[0m:[93m72[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'reason' has no initializer and is not definitely assigned in the constructor.
+
+[7m72[0m   reason: string;
+[7m  [0m [91m  ~~~~~~[0m
+[96msrc/businesses/dtos/business.dto.ts[0m:[93m33[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'abn' has no initializer and is not definitely assigned in the constructor.
+
+[7m33[0m   abn: string;
+[7m  [0m [91m  ~~~[0m
+[96msrc/businesses/dtos/business.dto.ts[0m:[93m37[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'category' has no initializer and is not definitely assigned in the constructor.
+
+[7m37[0m   category: BusinessCategory;
+[7m  [0m [91m  ~~~~~~~~[0m
+[96msrc/businesses/dtos/business.dto.ts[0m:[93m41[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'email' has no initializer and is not definitely assigned in the constructor.
+
+[7m41[0m   email: string;
+[7m  [0m [91m  ~~~~~[0m
+[96msrc/businesses/dtos/business.dto.ts[0m:[93m45[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'phone' has no initializer and is not definitely assigned in the constructor.
+
+[7m45[0m   phone: string;
+[7m  [0m [91m  ~~~~~[0m
+[96msrc/businesses/dtos/business.dto.ts[0m:[93m58[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'suburb' has no initializer and is not definitely assigned in the constructor.
+
+[7m58[0m   suburb: string;
+[7m  [0m [91m  ~~~~~~[0m
+[96msrc/businesses/dtos/business.dto.ts[0m:[93m62[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'state' has no initializer and is not definitely assigned in the constructor.
+
+[7m62[0m   state: string;
+[7m  [0m [91m  ~~~~~[0m
+[96msrc/businesses/dtos/business.dto.ts[0m:[93m66[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'postcode' has no initializer and is not definitely assigned in the constructor.
+
+[7m66[0m   postcode: string;
+[7m  [0m [91m  ~~~~~~~~[0m
+[96msrc/businesses/dtos/business.dto.ts[0m:[93m70[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'street_address' has no initializer and is not definitely assigned in the constructor.
+
+[7m70[0m   street_address: string;
+[7m  [0m [91m  ~~~~~~~~~~~~~~[0m
+[96msrc/businesses/dtos/business.dto.ts[0m:[93m108[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'bsb' has no initializer and is not definitely assigned in the constructor.
+
+[7m108[0m   bsb: string;
+[7m   [0m [91m  ~~~[0m
+[96msrc/businesses/dtos/business.dto.ts[0m:[93m112[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'account_number' has no initializer and is not definitely assigned in the constructor.
+
+[7m112[0m   account_number: string;
+[7m   [0m [91m  ~~~~~~~~~~~~~~[0m
+[96msrc/businesses/dtos/business.dto.ts[0m:[93m117[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'account_holder_name' has no initializer and is not definitely assigned in the constructor.
+
+[7m117[0m   account_holder_name: string;
+[7m   [0m [91m  ~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/cache/redis.service.ts[0m:[93m10[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'host' does not exist in type 'RedisClientOptions<RedisModules, RedisFunctions, RedisScripts>'.
+
+[7m10[0m       host: process.env.REDIS_HOST || 'localhost',
+[7m  [0m [91m      ~~~~[0m
+[96msrc/common/common.module.ts[0m:[93m14[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"./decorators/roles.decorator"' has no exported member 'RolesDecorator'.
+
+[7m14[0m import { RolesDecorator } from './decorators/roles.decorator';
+[7m  [0m [91m         ~~~~~~~~~~~~~~[0m
+[96msrc/common/common.module.ts[0m:[93m19[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'config' does not exist in type 'RedisModuleOptions'.
+
+[7m19[0m       config: {
+[7m  [0m [91m      ~~~~~~[0m
+[96msrc/common/entities/audit-log.entity.ts[0m:[93m14[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'id' has no initializer and is not definitely assigned in the constructor.
+
+[7m14[0m   id: string;
+[7m  [0m [91m  ~~[0m
+[96msrc/common/entities/audit-log.entity.ts[0m:[93m17[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'action' has no initializer and is not definitely assigned in the constructor.
+
+[7m17[0m   action: string;
+[7m  [0m [91m  ~~~~~~[0m
+[96msrc/common/entities/audit-log.entity.ts[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'status' has no initializer and is not definitely assigned in the constructor.
+
+[7m26[0m   status: string;
+[7m  [0m [91m  ~~~~~~[0m
+[96msrc/common/entities/audit-log.entity.ts[0m:[93m29[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'created_at' has no initializer and is not definitely assigned in the constructor.
+
+[7m29[0m   created_at: Date;
+[7m  [0m [91m  ~~~~~~~~~~[0m
+[96msrc/common/entities/booking.entity.ts[0m:[93m53[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'customer_name' has no initializer and is not definitely assigned in the constructor.
+
+[7m53[0m   customer_name: string;
+[7m  [0m [91m  ~~~~~~~~~~~~~[0m
+[96msrc/common/entities/booking.entity.ts[0m:[93m56[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'customer_address' has no initializer and is not definitely assigned in the constructor.
+
+[7m56[0m   customer_address: string;
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~[0m
+[96msrc/common/entities/booking.entity.ts[0m:[93m93[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'problem_description' has no initializer and is not definitely assigned in the constructor.
+
+[7m93[0m   problem_description: string;
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/common/entities/booking.entity.ts[0m:[93m99[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'call_out_fee' has no initializer and is not definitely assigned in the constructor.
+
+[7m99[0m   call_out_fee: number;
+[7m  [0m [91m  ~~~~~~~~~~~~[0m
+[96msrc/common/entities/booking.entity.ts[0m:[93m102[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'commission_amount' has no initializer and is not definitely assigned in the constructor.
+
+[7m102[0m   commission_amount: number;
+[7m   [0m [91m  ~~~~~~~~~~~~~~~~~[0m
+[96msrc/common/entities/booking.entity.ts[0m:[93m108[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'updated_at' has no initializer and is not definitely assigned in the constructor.
+
+[7m108[0m   updated_at: Date;
+[7m   [0m [91m  ~~~~~~~~~~[0m
+[96msrc/common/entities/booking.entity.ts[0m:[93m118[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'customer' has no initializer and is not definitely assigned in the constructor.
+
+[7m118[0m   customer: CustomerEntity;
+[7m   [0m [91m  ~~~~~~~~[0m
+[96msrc/common/entities/booking.entity.ts[0m:[93m122[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'business' has no initializer and is not definitely assigned in the constructor.
+
+[7m122[0m   business: BusinessEntity;
+[7m   [0m [91m  ~~~~~~~~[0m
+[96msrc/common/entities/business-banking-details.entity.ts[0m:[93m17[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'id' has no initializer and is not definitely assigned in the constructor.
+
+[7m17[0m   id: string;
+[7m  [0m [91m  ~~[0m
+[96msrc/common/entities/business-banking-details.entity.ts[0m:[93m20[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'business_id' has no initializer and is not definitely assigned in the constructor.
+
+[7m20[0m   business_id: string;
+[7m  [0m [91m  ~~~~~~~~~~~[0m
+[96msrc/common/entities/business-banking-details.entity.ts[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'account_name' has no initializer and is not definitely assigned in the constructor.
+
+[7m23[0m   account_name: string;
+[7m  [0m [91m  ~~~~~~~~~~~~[0m
+[96msrc/common/entities/business-banking-details.entity.ts[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'bsb' has no initializer and is not definitely assigned in the constructor.
+
+[7m26[0m   bsb: string;
+[7m  [0m [91m  ~~~[0m
+[96msrc/common/entities/business-banking-details.entity.ts[0m:[93m29[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'account_number' has no initializer and is not definitely assigned in the constructor.
+
+[7m29[0m   account_number: string;
+[7m  [0m [91m  ~~~~~~~~~~~~~~[0m
+[96msrc/common/entities/business-banking-details.entity.ts[0m:[93m35[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'is_verified' has no initializer and is not definitely assigned in the constructor.
+
+[7m35[0m   is_verified: boolean;
+[7m  [0m [91m  ~~~~~~~~~~~[0m
+[96msrc/common/entities/business-banking-details.entity.ts[0m:[93m38[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'created_at' has no initializer and is not definitely assigned in the constructor.
+
+[7m38[0m   created_at: Date;
+[7m  [0m [91m  ~~~~~~~~~~[0m
+[96msrc/common/entities/business-banking-details.entity.ts[0m:[93m41[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'updated_at' has no initializer and is not definitely assigned in the constructor.
+
+[7m41[0m   updated_at: Date;
+[7m  [0m [91m  ~~~~~~~~~~[0m
+[96msrc/common/entities/business-banking-details.entity.ts[0m:[93m45[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'business' has no initializer and is not definitely assigned in the constructor.
+
+[7m45[0m   business: BusinessEntity;
+[7m  [0m [91m  ~~~~~~~~[0m
+[96msrc/common/entities/business-hours.entity.ts[0m:[93m17[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'id' has no initializer and is not definitely assigned in the constructor.
+
+[7m17[0m   id: string;
+[7m  [0m [91m  ~~[0m
+[96msrc/common/entities/business-hours.entity.ts[0m:[93m20[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'business_id' has no initializer and is not definitely assigned in the constructor.
+
+[7m20[0m   business_id: string;
+[7m  [0m [91m  ~~~~~~~~~~~[0m
+[96msrc/common/entities/business-hours.entity.ts[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'day_of_week' has no initializer and is not definitely assigned in the constructor.
+
+[7m23[0m   day_of_week: number;
+[7m  [0m [91m  ~~~~~~~~~~~[0m
+[96msrc/common/entities/business-hours.entity.ts[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'start_time' has no initializer and is not definitely assigned in the constructor.
+
+[7m26[0m   start_time: string;
+[7m  [0m [91m  ~~~~~~~~~~[0m
+[96msrc/common/entities/business-hours.entity.ts[0m:[93m29[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'end_time' has no initializer and is not definitely assigned in the constructor.
+
+[7m29[0m   end_time: string;
+[7m  [0m [91m  ~~~~~~~~[0m
+[96msrc/common/entities/business-hours.entity.ts[0m:[93m32[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'is_available' has no initializer and is not definitely assigned in the constructor.
+
+[7m32[0m   is_available: boolean;
+[7m  [0m [91m  ~~~~~~~~~~~~[0m
+[96msrc/common/entities/business-hours.entity.ts[0m:[93m35[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'created_at' has no initializer and is not definitely assigned in the constructor.
+
+[7m35[0m   created_at: Date;
+[7m  [0m [91m  ~~~~~~~~~~[0m
+[96msrc/common/entities/business-hours.entity.ts[0m:[93m38[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'updated_at' has no initializer and is not definitely assigned in the constructor.
+
+[7m38[0m   updated_at: Date;
+[7m  [0m [91m  ~~~~~~~~~~[0m
+[96msrc/common/entities/business-hours.entity.ts[0m:[93m42[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'business' has no initializer and is not definitely assigned in the constructor.
+
+[7m42[0m   business: BusinessEntity;
+[7m  [0m [91m  ~~~~~~~~[0m
+[96msrc/common/entities/business-service.entity.ts[0m:[93m30[0m:[93m3[0m - [91merror[0m[90m TS2687: [0mAll declarations of 'out_of_hours_fee' must have identical modifiers.
+
+[7m30[0m   out_of_hours_fee?: number;
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~[0m
+[96msrc/common/entities/business-service.entity.ts[0m:[93m36[0m:[93m3[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'out_of_hours_fee'.
+
+[7m36[0m   out_of_hours_fee!: number;
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~[0m
+[96msrc/common/entities/business-service.entity.ts[0m:[93m36[0m:[93m3[0m - [91merror[0m[90m TS2687: [0mAll declarations of 'out_of_hours_fee' must have identical modifiers.
+
+[7m36[0m   out_of_hours_fee!: number;
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~[0m
+[96msrc/common/entities/business-service.entity.ts[0m:[93m36[0m:[93m3[0m - [91merror[0m[90m TS2717: [0mSubsequent property declarations must have the same type.  Property 'out_of_hours_fee' must be of type 'number | undefined', but here has type 'number'.
+
+[7m36[0m   out_of_hours_fee!: number;
+[7m  [0m [91m  ~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/common/entities/business-service.entity.ts[0m:[93m30[0m:[93m3[0m
+    [7m30[0m   out_of_hours_fee?: number;
+    [7m  [0m [96m  ~~~~~~~~~~~~~~~~[0m
+    'out_of_hours_fee' was also declared here.
+[96msrc/common/entities/customer.entity.ts[0m:[93m56[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'user' has no initializer and is not definitely assigned in the constructor.
+
+[7m56[0m   user: UserEntity;
+[7m  [0m [91m  ~~~~[0m
+[96msrc/common/services/audit.service.ts[0m:[93m27[0m:[93m56[0m - [91merror[0m[90m TS18046: [0m'err' is of type 'unknown'.
+
+[7m27[0m       this.logger.error('Failed to persist audit log', err.stack || err.message);
+[7m  [0m [91m                                                       ~~~[0m
+[96msrc/common/services/audit.service.ts[0m:[93m27[0m:[93m69[0m - [91merror[0m[90m TS18046: [0m'err' is of type 'unknown'.
+
+[7m27[0m       this.logger.error('Failed to persist audit log', err.stack || err.message);
+[7m  [0m [91m                                                                    ~~~[0m
+[96msrc/main.ts[0m:[93m38[0m:[93m12[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m38[0m   app.use((req, res, next) => {
+[7m  [0m [91m           ~~~[0m
+[96msrc/main.ts[0m:[93m38[0m:[93m17[0m - [91merror[0m[90m TS7006: [0mParameter 'res' implicitly has an 'any' type.
+
+[7m38[0m   app.use((req, res, next) => {
+[7m  [0m [91m                ~~~[0m
+[96msrc/main.ts[0m:[93m38[0m:[93m22[0m - [91merror[0m[90m TS7006: [0mParameter 'next' implicitly has an 'any' type.
+
+[7m38[0m   app.use((req, res, next) => {
+[7m  [0m [91m                     ~~~~[0m
+[96msrc/main.ts[0m:[93m65[0m:[93m22[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  Overload 1 of 4, '(typeOrToken: string | symbol | Function | Type<any>, options: { strict?: boolean | undefined; each?: false | undefined; }): any', gave the following error.
+    Type '() => { status: string; timestamp: string; }' has no properties in common with type '{ strict?: boolean | undefined; each?: false | undefined; }'.
+  Overload 2 of 4, '(typeOrToken: string | symbol | Function | Type<any>, options: { strict?: boolean | undefined; each: true; }): any[]', gave the following error.
+    Argument of type '() => { status: string; timestamp: string; }' is not assignable to parameter of type '{ strict?: boolean | undefined; each: true; }'.
+  Overload 3 of 4, '(typeOrToken: string | symbol | Function | Type<any>, options?: GetOrResolveOptions | undefined): any', gave the following error.
+    Type '() => { status: string; timestamp: string; }' has no properties in common with type 'GetOrResolveOptions'.
+
+[7m65[0m   app.get('/health', () => ({ status: 'ok', timestamp: new Date().toISOString() }));
+[7m  [0m [91m                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/main.ts[0m:[93m66[0m:[93m25[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  Overload 1 of 4, '(typeOrToken: string | symbol | Function | Type<any>, options: { strict?: boolean | undefined; each?: false | undefined; }): any', gave the following error.
+    Type '() => Promise<{ status: string; service: string; }>' has no properties in common with type '{ strict?: boolean | undefined; each?: false | undefined; }'.
+  Overload 2 of 4, '(typeOrToken: string | symbol | Function | Type<any>, options: { strict?: boolean | undefined; each: true; }): any[]', gave the following error.
+    Argument of type '() => Promise<{ status: string; service: string; }>' is not assignable to parameter of type '{ strict?: boolean | undefined; each: true; }'.
+  Overload 3 of 4, '(typeOrToken: string | symbol | Function | Type<any>, options?: GetOrResolveOptions | undefined): any', gave the following error.
+    Type '() => Promise<{ status: string; service: string; }>' has no properties in common with type 'GetOrResolveOptions'.
+
+[7m66[0m   app.get('/health/db', async () => {
+[7m  [0m [91m                        ~~~~~~~~~~~~~[0m
+
+[96msrc/modules/admin/admin.controller.ts[0m:[93m78[0m:[93m52[0m - [91merror[0m[90m TS2339: [0mProperty 'account_name' does not exist on type 'BusinessBankingDetailsEntity[]'.
+
+[7m78[0m             account_name: business.banking_details.account_name,
+[7m  [0m [91m                                                   ~~~~~~~~~~~~[0m
+[96msrc/modules/admin/admin.controller.ts[0m:[93m79[0m:[93m43[0m - [91merror[0m[90m TS2339: [0mProperty 'bsb' does not exist on type 'BusinessBankingDetailsEntity[]'.
+
+[7m79[0m             bsb: business.banking_details.bsb,
+[7m  [0m [91m                                          ~~~[0m
+[96msrc/modules/admin/admin.controller.ts[0m:[93m80[0m:[93m54[0m - [91merror[0m[90m TS2339: [0mProperty 'account_number' does not exist on type 'BusinessBankingDetailsEntity[]'.
+
+[7m80[0m             account_number: business.banking_details.account_number,
+[7m  [0m [91m                                                     ~~~~~~~~~~~~~~[0m
+[96msrc/modules/admin/admin.controller.ts[0m:[93m81[0m:[93m51[0m - [91merror[0m[90m TS2339: [0mProperty 'is_verified' does not exist on type 'BusinessBankingDetailsEntity[]'.
+
+[7m81[0m             is_verified: business.banking_details.is_verified,
+[7m  [0m [91m                                                  ~~~~~~~~~~~[0m
+[96msrc/modules/admin/admin.controller.ts[0m:[93m102[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'approved_at' does not exist on type 'BusinessEntity'.
+
+[7m102[0m       approvedAt: business.approved_at,
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/modules/admin/admin.controller.ts[0m:[93m123[0m:[93m33[0m - [91merror[0m[90m TS2339: [0mProperty 'approval_notes' does not exist on type 'BusinessEntity'.
+
+[7m123[0m       rejectionReason: business.approval_notes,
+[7m   [0m [91m                                ~~~~~~~~~~~~~~[0m
+[96msrc/modules/admin/admin.controller.ts[0m:[93m124[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'rejected_at' does not exist on type 'BusinessEntity'.
+
+[7m124[0m       rejectedAt: business.rejected_at,
+[7m   [0m [91m                           ~~~~~~~~~~~[0m
+[96msrc/modules/bookings/booking-acceptance.service.ts[0m:[93m47[0m:[93m120[0m - [91merror[0m[90m TS18048: [0m'booking.service' is possibly 'undefined'.
+
+[7m47[0m     const message = `New booking request: ${booking.customer.user.first_name} ${booking.customer.user.last_name} for ${booking.service.service_name}. Accept: ${acceptLink} Decline: ${declineLink}`;
+[7m  [0m [91m                                                                                                                       ~~~~~~~~~~~~~~~[0m
+[96msrc/modules/bookings/booking-acceptance.service.ts[0m:[93m48[0m:[93m38[0m - [91merror[0m[90m TS2345: [0mArgument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+
+[7m48[0m     await this.twilioService.sendSms(booking.business.user.phone_number, message);
+[7m  [0m [91m                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/bookings/booking-acceptance.service.ts[0m:[93m55[0m:[93m7[0m - [91merror[0m[90m TS18048: [0m'booking.service' is possibly 'undefined'.
+
+[7m55[0m       booking.service.service_name,
+[7m  [0m [91m      ~~~~~~~~~~~~~~~[0m
+[96msrc/modules/bookings/booking-acceptance.service.ts[0m:[93m135[0m:[93m7[0m - [91merror[0m[90m TS2345: [0mArgument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+
+[7m135[0m       booking.customer.user.phone_number,
+[7m   [0m [91m      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/bookings/booking-acceptance.service.ts[0m:[93m150[0m:[93m7[0m - [91merror[0m[90m TS2345: [0mArgument of type 'number | undefined' is not assignable to parameter of type 'string | number'.
+  Type 'undefined' is not assignable to type 'string | number'.
+
+[7m150[0m       booking.total_amount,
+[7m   [0m [91m      ~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/bookings/booking-acceptance.service.ts[0m:[93m159[0m:[93m7[0m - [91merror[0m[90m TS18048: [0m'booking.total_amount' is possibly 'undefined'.
+
+[7m159[0m       booking.total_amount.toFixed(2),
+[7m   [0m [91m      ~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/bookings/booking-acceptance.service.ts[0m:[93m160[0m:[93m7[0m - [91merror[0m[90m TS2554: [0mExpected 2-3 arguments, but got 4.
+
+[7m160[0m       paymentLink,
+[7m   [0m [91m      ~~~~~~~~~~~[0m
+[96msrc/modules/bookings/booking.service.ts[0m:[93m120[0m:[93m44[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  Overload 1 of 3, '(entityLikeArray: DeepPartial<BookingEntity>[]): BookingEntity[]', gave the following error.
+    Object literal may only specify known properties, and 'business_id' does not exist in type 'DeepPartial<BookingEntity>[]'.
+  Overload 2 of 3, '(entityLike: DeepPartial<BookingEntity>): BookingEntity', gave the following error.
+    Object literal may only specify known properties, and 'location' does not exist in type 'DeepPartial<BookingEntity>'.
+
+[7m120[0m     const booking = this.bookingRepository.create({
+[7m   [0m [91m                                           ~~~~~~[0m
+
+[96msrc/modules/bookings/booking.service.ts[0m:[93m139[0m:[93m9[0m - [91merror[0m[90m TS2345: [0mArgument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+
+[7m139[0m         business.user.phone_number,
+[7m   [0m [91m        ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/bookings/booking.service.ts[0m:[93m235[0m:[93m30[0m - [91merror[0m[90m TS18048: [0m'booking.service' is possibly 'undefined'.
+
+[7m235[0m       booking.total_amount = booking.service.hourly_rate * dto.duration_hours;
+[7m   [0m [91m                             ~~~~~~~~~~~~~~~[0m
+[96msrc/modules/bookings/booking.service.ts[0m:[93m241[0m:[93m15[0m - [91merror[0m[90m TS2339: [0mProperty 'location' does not exist on type 'BookingEntity'.
+
+[7m241[0m       booking.location = dto.location;
+[7m   [0m [91m              ~~~~~~~~[0m
+[96msrc/modules/bookings/booking.service.ts[0m:[93m245[0m:[93m15[0m - [91merror[0m[90m TS2339: [0mProperty 'notes' does not exist on type 'BookingEntity'.
+
+[7m245[0m       booking.notes = dto.notes;
+[7m   [0m [91m              ~~~~~[0m
+[96msrc/modules/bookings/booking.service.ts[0m:[93m281[0m:[93m9[0m - [91merror[0m[90m TS2345: [0mArgument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+
+[7m281[0m         booking.customer.user.phone_number,
+[7m   [0m [91m        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/bookings/booking.service.ts[0m:[93m320[0m:[93m11[0m - [91merror[0m[90m TS18048: [0m'booking.total_amount' is possibly 'undefined'.
+
+[7m320[0m         ? booking.total_amount * 0.5
+[7m   [0m [91m          ~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/bookings/booking.service.ts[0m:[93m331[0m:[93m9[0m - [91merror[0m[90m TS18048: [0m'refundAmount' is possibly 'undefined'.
+
+[7m331[0m     if (refundAmount > 0) {
+[7m   [0m [91m        ~~~~~~~~~~~~[0m
+[96msrc/modules/bookings/booking.service.ts[0m:[93m339[0m:[93m47[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  Overload 1 of 3, '(entityLikeArray: DeepPartial<PaymentEntity>[]): PaymentEntity[]', gave the following error.
+    Object literal may only specify known properties, and 'booking_id' does not exist in type 'DeepPartial<PaymentEntity>[]'.
+  Overload 2 of 3, '(entityLike: DeepPartial<PaymentEntity>): PaymentEntity', gave the following error.
+    Object literal may only specify known properties, and 'payment_type' does not exist in type 'DeepPartial<PaymentEntity>'.
+
+[7m339[0m         const refund = this.paymentRepository.create({
+[7m   [0m [91m                                              ~~~~~~[0m
+
+[96msrc/modules/bookings/booking.service.ts[0m:[93m346[0m:[93m48[0m - [91merror[0m[90m TS2339: [0mProperty 'stripe_payment_id' does not exist on type 'PaymentEntity'.
+
+[7m346[0m           stripe_payment_id: `refund_${payment.stripe_payment_id}`,
+[7m   [0m [91m                                               ~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/bookings/booking.service.ts[0m:[93m358[0m:[93m9[0m - [91merror[0m[90m TS2345: [0mArgument of type 'number | undefined' is not assignable to parameter of type 'number'.
+  Type 'undefined' is not assignable to type 'number'.
+
+[7m358[0m         refundAmount,
+[7m   [0m [91m        ~~~~~~~~~~~~[0m
+[96msrc/modules/bookings/bookings.controller.ts[0m:[93m24[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m24[0m   async createBooking(@Request() req, @Body() dto: CreateBookingDto) {
+[7m  [0m [91m                      ~~~~~~~~~~~~~~[0m
+[96msrc/modules/bookings/bookings.controller.ts[0m:[93m45[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'b.service' is possibly 'undefined'.
+
+[7m45[0m         serviceName: b.service.service_name,
+[7m  [0m [91m                     ~~~~~~~~~[0m
+[96msrc/modules/bookings/bookings.controller.ts[0m:[93m49[0m:[93m21[0m - [91merror[0m[90m TS2339: [0mProperty 'location' does not exist on type 'BookingEntity'.
+
+[7m49[0m         location: b.location,
+[7m  [0m [91m                    ~~~~~~~~[0m
+[96msrc/modules/bookings/bookings.controller.ts[0m:[93m64[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'b.service' is possibly 'undefined'.
+
+[7m64[0m         serviceName: b.service.service_name,
+[7m  [0m [91m                     ~~~~~~~~~[0m
+[96msrc/modules/bookings/bookings.controller.ts[0m:[93m69[0m:[93m21[0m - [91merror[0m[90m TS2339: [0mProperty 'location' does not exist on type 'BookingEntity'.
+
+[7m69[0m         location: b.location,
+[7m  [0m [91m                    ~~~~~~~~[0m
+[96msrc/modules/bookings/bookings.controller.ts[0m:[93m93[0m:[93m21[0m - [91merror[0m[90m TS2339: [0mProperty 'location' does not exist on type 'BookingEntity'.
+
+[7m93[0m         location: b.location,
+[7m  [0m [91m                    ~~~~~~~~[0m
+[96msrc/modules/bookings/bookings.controller.ts[0m:[93m114[0m:[93m15[0m - [91merror[0m[90m TS18048: [0m'booking.service' is possibly 'undefined'.
+
+[7m114[0m         name: booking.service.service_name,
+[7m   [0m [91m              ~~~~~~~~~~~~~~~[0m
+[96msrc/modules/bookings/bookings.controller.ts[0m:[93m115[0m:[93m15[0m - [91merror[0m[90m TS18048: [0m'booking.service' is possibly 'undefined'.
+
+[7m115[0m         rate: booking.service.hourly_rate,
+[7m   [0m [91m              ~~~~~~~~~~~~~~~[0m
+[96msrc/modules/bookings/bookings.controller.ts[0m:[93m119[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'location' does not exist on type 'BookingEntity'.
+
+[7m119[0m       location: booking.location,
+[7m   [0m [91m                        ~~~~~~~~[0m
+[96msrc/modules/bookings/bookings.controller.ts[0m:[93m120[0m:[93m22[0m - [91merror[0m[90m TS2339: [0mProperty 'notes' does not exist on type 'BookingEntity'.
+
+[7m120[0m       notes: booking.notes,
+[7m   [0m [91m                     ~~~~~[0m
+[96msrc/modules/bookings/bookings.controller.ts[0m:[93m133[0m:[93m5[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m133[0m     @Request() req,
+[7m   [0m [91m    ~~~~~~~~~~~~~~[0m
+[96msrc/modules/bookings/bookings.controller.ts[0m:[93m153[0m:[93m5[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m153[0m     @Request() req,
+[7m   [0m [91m    ~~~~~~~~~~~~~~[0m
+[96msrc/modules/bookings/bookings.controller.ts[0m:[93m170[0m:[93m5[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m170[0m     @Request() req,
+[7m   [0m [91m    ~~~~~~~~~~~~~~[0m
+[96msrc/modules/bookings/bookings.controller.ts[0m:[93m198[0m:[93m5[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m198[0m     @Request() req,
+[7m   [0m [91m    ~~~~~~~~~~~~~~[0m
+[96msrc/modules/bookings/bookings.controller.ts[0m:[93m216[0m:[93m5[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m216[0m     @Request() req,
+[7m   [0m [91m    ~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.controller.ts[0m:[93m28[0m:[93m21[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m28[0m   async getOverview(@Request() req) {
+[7m  [0m [91m                    ~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.controller.ts[0m:[93m35[0m:[93m20[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m35[0m   async getProfile(@Request() req) {
+[7m  [0m [91m                   ~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.controller.ts[0m:[93m57[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m57[0m   async updateProfile(@Request() req, @Body() updates) {
+[7m  [0m [91m                      ~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.controller.ts[0m:[93m57[0m:[93m39[0m - [91merror[0m[90m TS7006: [0mParameter 'updates' implicitly has an 'any' type.
+
+[7m57[0m   async updateProfile(@Request() req, @Body() updates) {
+[7m  [0m [91m                                      ~~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.controller.ts[0m:[93m69[0m:[93m21[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m69[0m   async getServices(@Request() req) {
+[7m  [0m [91m                    ~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.controller.ts[0m:[93m85[0m:[93m20[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m85[0m   async addService(@Request() req, @Body() dto: UpdateServiceDto) {
+[7m  [0m [91m                   ~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.controller.ts[0m:[93m98[0m:[93m5[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m98[0m     @Request() req,
+[7m  [0m [91m    ~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.controller.ts[0m:[93m114[0m:[93m5[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m114[0m     @Request() req,
+[7m   [0m [91m    ~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.controller.ts[0m:[93m127[0m:[93m18[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m127[0m   async getHours(@Request() req) {
+[7m   [0m [91m                 ~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.controller.ts[0m:[93m143[0m:[93m5[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m143[0m     @Request() req,
+[7m   [0m [91m    ~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.controller.ts[0m:[93m156[0m:[93m27[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m156[0m   async getRecentBookings(@Request() req) {
+[7m   [0m [91m                          ~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.controller.ts[0m:[93m174[0m:[93m20[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m174[0m   async getRevenue(@Request() req) {
+[7m   [0m [91m                   ~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.controller.ts[0m:[93m179[0m:[93m25[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m179[0m   async getBookingStats(@Request() req) {
+[7m   [0m [91m                        ~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.service.ts[0m:[93m7[0m:[93m10[0m - [91merror[0m[90m TS2459: [0mModule '"../bookings/booking.service"' declares 'BookingEntity' locally, but it is not exported.
+
+[7m7[0m import { BookingEntity, BookingStatus } from '../bookings/booking.service';
+[7m [0m [91m         ~~~~~~~~~~~~~[0m
+
+  [96msrc/modules/bookings/booking.service.ts[0m:[93m9[0m:[93m10[0m
+    [7m9[0m import { BookingEntity } from '../../common/entities/booking.entity';
+    [7m [0m [96m         ~~~~~~~~~~~~~[0m
+    'BookingEntity' is declared here.
+[96msrc/modules/business-dashboard/business-dashboard.service.ts[0m:[93m88[0m:[93m34[0m - [91merror[0m[90m TS2345: [0mArgument of type '"business_amount"' is not assignable to parameter of type 'PickKeysByType<PaymentEntity, number>'.
+
+[7m88[0m       this.paymentRepository.sum('business_amount', {
+[7m  [0m [91m                                 ~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.service.ts[0m:[93m92[0m:[93m34[0m - [91merror[0m[90m TS2345: [0mArgument of type '"business_amount"' is not assignable to parameter of type 'PickKeysByType<PaymentEntity, number>'.
+
+[7m92[0m       this.paymentRepository.sum('business_amount', {
+[7m  [0m [91m                                 ~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.service.ts[0m:[93m154[0m:[93m11[0m - [91merror[0m[90m TS7053: [0mElement implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Partial<BusinessEntity>'.
+  No index signature with a parameter of type 'string' was found on type 'Partial<BusinessEntity>'.
+
+[7m154[0m       if (updates[field] !== undefined) {
+[7m   [0m [91m          ~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.service.ts[0m:[93m155[0m:[93m9[0m - [91merror[0m[90m TS7053: [0mElement implicitly has an 'any' type because expression of type 'string' can't be used to index type 'BusinessEntity'.
+  No index signature with a parameter of type 'string' was found on type 'BusinessEntity'.
+
+[7m155[0m         business[field] = updates[field];
+[7m   [0m [91m        ~~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.service.ts[0m:[93m155[0m:[93m27[0m - [91merror[0m[90m TS7053: [0mElement implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Partial<BusinessEntity>'.
+  No index signature with a parameter of type 'string' was found on type 'Partial<BusinessEntity>'.
+
+[7m155[0m         business[field] = updates[field];
+[7m   [0m [91m                          ~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.service.ts[0m:[93m301[0m:[93m34[0m - [91merror[0m[90m TS2345: [0mArgument of type '"business_amount"' is not assignable to parameter of type 'PickKeysByType<PaymentEntity, number>'.
+
+[7m301[0m       this.paymentRepository.sum('business_amount', {
+[7m   [0m [91m                                 ~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.service.ts[0m:[93m306[0m:[93m34[0m - [91merror[0m[90m TS2345: [0mArgument of type '"business_amount"' is not assignable to parameter of type 'PickKeysByType<PaymentEntity, number>'.
+
+[7m306[0m       this.paymentRepository.sum('business_amount', {
+[7m   [0m [91m                                 ~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.service.ts[0m:[93m311[0m:[93m34[0m - [91merror[0m[90m TS2345: [0mArgument of type '"business_amount"' is not assignable to parameter of type 'PickKeysByType<PaymentEntity, number>'.
+
+[7m311[0m       this.paymentRepository.sum('business_amount', {
+[7m   [0m [91m                                 ~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/business-dashboard/business-dashboard.service.ts[0m:[93m316[0m:[93m34[0m - [91merror[0m[90m TS2345: [0mArgument of type '"business_amount"' is not assignable to parameter of type 'PickKeysByType<PaymentEntity, number>'.
+
+[7m316[0m       this.paymentRepository.sum('business_amount', {
+[7m   [0m [91m                                 ~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/businesses/business-approval.service.ts[0m:[93m47[0m:[93m14[0m - [91merror[0m[90m TS2339: [0mProperty 'approval_notes' does not exist on type 'BusinessEntity'.
+
+[7m47[0m     business.approval_notes = dto.adminNotes || 'Approved by admin';
+[7m  [0m [91m             ~~~~~~~~~~~~~~[0m
+[96msrc/modules/businesses/business-approval.service.ts[0m:[93m48[0m:[93m14[0m - [91merror[0m[90m TS2339: [0mProperty 'approved_at' does not exist on type 'BusinessEntity'.
+
+[7m48[0m     business.approved_at = new Date();
+[7m  [0m [91m             ~~~~~~~~~~~[0m
+[96msrc/modules/businesses/business-approval.service.ts[0m:[93m59[0m:[93m9[0m - [91merror[0m[90m TS2345: [0mArgument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+
+[7m59[0m         business.user.phone_number,
+[7m  [0m [91m        ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/businesses/business-approval.service.ts[0m:[93m86[0m:[93m14[0m - [91merror[0m[90m TS2339: [0mProperty 'approval_notes' does not exist on type 'BusinessEntity'.
+
+[7m86[0m     business.approval_notes = dto.rejectionReason;
+[7m  [0m [91m             ~~~~~~~~~~~~~~[0m
+[96msrc/modules/businesses/business-approval.service.ts[0m:[93m87[0m:[93m14[0m - [91merror[0m[90m TS2339: [0mProperty 'rejected_at' does not exist on type 'BusinessEntity'.
+
+[7m87[0m     business.rejected_at = new Date();
+[7m  [0m [91m             ~~~~~~~~~~~[0m
+[96msrc/modules/businesses/business-approval.service.ts[0m:[93m99[0m:[93m9[0m - [91merror[0m[90m TS2345: [0mArgument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+
+[7m99[0m         business.user.phone_number,
+[7m  [0m [91m        ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/cache/redis.service.ts[0m:[93m10[0m:[93m7[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'host' does not exist in type 'RedisClientOptions<RedisModules, RedisFunctions, RedisScripts>'.
+
+[7m10[0m       host: process.env.REDIS_HOST || 'localhost',
+[7m  [0m [91m      ~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.controller.ts[0m:[93m24[0m:[93m21[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m24[0m   async getOverview(@Request() req) {
+[7m  [0m [91m                    ~~~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.controller.ts[0m:[93m29[0m:[93m29[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m29[0m   async getUpcomingBookings(@Request() req) {
+[7m  [0m [91m                            ~~~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.controller.ts[0m:[93m38[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'b.service' is possibly 'undefined'.
+
+[7m38[0m         serviceName: b.service.service_name,
+[7m  [0m [91m                     ~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.controller.ts[0m:[93m40[0m:[93m21[0m - [91merror[0m[90m TS2339: [0mProperty 'location' does not exist on type 'BookingEntity'.
+
+[7m40[0m         location: b.location,
+[7m  [0m [91m                    ~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.controller.ts[0m:[93m47[0m:[93m27[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m47[0m   async getBookingHistory(@Request() req) {
+[7m  [0m [91m                          ~~~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.controller.ts[0m:[93m56[0m:[93m22[0m - [91merror[0m[90m TS18048: [0m'b.service' is possibly 'undefined'.
+
+[7m56[0m         serviceName: b.service.service_name,
+[7m  [0m [91m                     ~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.controller.ts[0m:[93m66[0m:[93m27[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m66[0m   async getPaymentHistory(@Request() req) {
+[7m  [0m [91m                          ~~~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.controller.ts[0m:[93m75[0m:[93m17[0m - [91merror[0m[90m TS2339: [0mProperty 'payment_type' does not exist on type 'PaymentEntity'.
+
+[7m75[0m         type: p.payment_type,
+[7m  [0m [91m                ~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.controller.ts[0m:[93m83[0m:[93m20[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m83[0m   async getReviews(@Request() req) {
+[7m  [0m [91m                   ~~~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.controller.ts[0m:[93m91[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'business' does not exist on type 'ReviewEntity'.
+
+[7m91[0m         businessName: r.business.name,
+[7m  [0m [91m                        ~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.controller.ts[0m:[93m93[0m:[93m18[0m - [91merror[0m[90m TS2339: [0mProperty 'title' does not exist on type 'ReviewEntity'.
+
+[7m93[0m         title: r.title,
+[7m  [0m [91m                 ~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.controller.ts[0m:[93m101[0m:[93m31[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m101[0m   async getFavoriteBusinesses(@Request() req) {
+[7m   [0m [91m                              ~~~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.controller.ts[0m:[93m112[0m:[93m22[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m112[0m   async getAddresses(@Request() req) {
+[7m   [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.controller.ts[0m:[93m120[0m:[93m21[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m120[0m   async saveAddress(@Request() req, @Body() body: { address: string }) {
+[7m   [0m [91m                    ~~~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.controller.ts[0m:[93m126[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m126[0m   async deleteAddress(@Request() req, @Param('address') address: string) {
+[7m   [0m [91m                      ~~~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.controller.ts[0m:[93m132[0m:[93m28[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m132[0m   async getMonthlySpending(@Request() req) {
+[7m   [0m [91m                           ~~~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.controller.ts[0m:[93m140[0m:[93m27[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m140[0m   async updatePreferences(@Request() req, @Body() preferences) {
+[7m   [0m [91m                          ~~~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.controller.ts[0m:[93m140[0m:[93m43[0m - [91merror[0m[90m TS7006: [0mParameter 'preferences' implicitly has an 'any' type.
+
+[7m140[0m   async updatePreferences(@Request() req, @Body() preferences) {
+[7m   [0m [91m                                          ~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.controller.ts[0m:[93m149[0m:[93m26[0m - [91merror[0m[90m TS7006: [0mParameter 'req' implicitly has an 'any' type.
+
+[7m149[0m   async getAverageRating(@Request() req) {
+[7m   [0m [91m                         ~~~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.service.ts[0m:[93m71[0m:[93m9[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'payment_type' does not exist in type 'FindOptionsWhere<PaymentEntity> | FindOptionsWhere<PaymentEntity>[]'.
+
+[7m71[0m         payment_type: 'booking',
+[7m  [0m [91m        ~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.service.ts[0m:[93m76[0m:[93m9[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'payment_type' does not exist in type 'FindOptionsWhere<PaymentEntity> | FindOptionsWhere<PaymentEntity>[]'.
+
+[7m76[0m         payment_type: 'refund',
+[7m  [0m [91m        ~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.service.ts[0m:[93m87[0m:[93m31[0m - [91merror[0m[90m TS2339: [0mProperty 'average_rating' does not exist on type 'CustomerEntity'.
+
+[7m87[0m       averageRating: customer.average_rating || 0,
+[7m  [0m [91m                              ~~~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.service.ts[0m:[93m162[0m:[93m37[0m - [91merror[0m[90m TS2339: [0mProperty 'saved_addresses' does not exist on type 'CustomerEntity'.
+
+[7m162[0m     const savedAddresses = customer.saved_addresses || [];
+[7m   [0m [91m                                    ~~~~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.service.ts[0m:[93m167[0m:[93m11[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'saved_addresses' does not exist in type '_QueryDeepPartialEntity<CustomerEntity>'.
+
+[7m167[0m         { saved_addresses: savedAddresses },
+[7m   [0m [91m          ~~~~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.service.ts[0m:[93m181[0m:[93m21[0m - [91merror[0m[90m TS2339: [0mProperty 'saved_addresses' does not exist on type 'CustomerEntity'.
+
+[7m181[0m     return customer.saved_addresses || [];
+[7m   [0m [91m                    ~~~~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.service.ts[0m:[93m193[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'saved_addresses' does not exist on type 'CustomerEntity'.
+
+[7m193[0m     const savedAddresses = (customer.saved_addresses || []).filter(
+[7m   [0m [91m                                     ~~~~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.service.ts[0m:[93m194[0m:[93m8[0m - [91merror[0m[90m TS7006: [0mParameter 'a' implicitly has an 'any' type.
+
+[7m194[0m       (a) => a !== address,
+[7m   [0m [91m       ~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.service.ts[0m:[93m198[0m:[93m9[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'saved_addresses' does not exist in type '_QueryDeepPartialEntity<CustomerEntity>'.
+
+[7m198[0m       { saved_addresses: savedAddresses },
+[7m   [0m [91m        ~~~~~~~~~~~~~~~[0m
+[96msrc/modules/customer-dashboard/customer-dashboard.service.ts[0m:[93m237[0m:[93m9[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'payment_type' does not exist in type 'FindOptionsWhere<PaymentEntity> | FindOptionsWhere<PaymentEntity>[]'.
+
+[7m237[0m         payment_type: 'booking',
+[7m   [0m [91m        ~~~~~~~~~~~~[0m
+[96msrc/modules/location/google-places.service.ts[0m:[93m3[0m:[93m36[0m - [91merror[0m[90m TS2307: [0mCannot find module '../config/config' or its corresponding type declarations.
+
+[7m3[0m import { googlePlacesConfig } from '../config/config';
+[7m [0m [91m                                   ~~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/payments/dto/create-payment-intent.dto.ts[0m:[93m2[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'bookingId' has no initializer and is not definitely assigned in the constructor.
+
+[7m2[0m   bookingId: string;
+[7m [0m [91m  ~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m4[0m:[93m10[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'Injectable'.
+
+[7m4[0m import { Injectable } from '@nestjs/common';
+[7m [0m [91m         ~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m5[0m:[93m10[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'DataSource'.
+
+[7m5[0m import { DataSource } from 'typeorm';
+[7m [0m [91m         ~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m17[0m:[93m31[0m - [91merror[0m[90m TS2339: [0mProperty 'dataSource' does not exist on type 'PropertyDescriptor'.
+
+[7m17[0m       const dataSource = this.dataSource as DataSource;
+[7m  [0m [91m                              ~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m38[0m:[93m10[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'Injectable'.
+
+[7m38[0m import { Injectable, BadRequestException, Logger, ConflictException } from '@nestjs/common';
+[7m  [0m [91m         ~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m38[0m:[93m43[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'Logger'.
+
+[7m38[0m import { Injectable, BadRequestException, Logger, ConflictException } from '@nestjs/common';
+[7m  [0m [91m                                          ~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m38[0m:[93m51[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'ConflictException'.
+
+[7m38[0m import { Injectable, BadRequestException, Logger, ConflictException } from '@nestjs/common';
+[7m  [0m [91m                                                  ~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m39[0m:[93m10[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'InjectRepository'.
+
+[7m39[0m import { InjectRepository } from '@nestjs/typeorm';
+[7m  [0m [91m         ~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m40[0m:[93m10[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'Repository'.
+
+[7m40[0m import { Repository, DataSource, EntityManager } from 'typeorm';
+[7m  [0m [91m         ~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m40[0m:[93m22[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'DataSource'.
+
+[7m40[0m import { Repository, DataSource, EntityManager } from 'typeorm';
+[7m  [0m [91m                     ~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m40[0m:[93m34[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'EntityManager'.
+
+[7m40[0m import { Repository, DataSource, EntityManager } from 'typeorm';
+[7m  [0m [91m                                 ~~~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m43[0m:[93m10[0m - [91merror[0m[90m TS2300: [0mDuplicate identifier 'BookingEntity'.
+
+[7m43[0m import { BookingEntity } from '../../common/entities/booking.entity';
+[7m  [0m [91m         ~~~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m45[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '../config/config' or its corresponding type declarations.
+
+[7m45[0m import { stripeConfig } from '../config/config';
+[7m  [0m [91m                             ~~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m62[0m:[93m19[0m - [91merror[0m[90m TS2554: [0mExpected 2 arguments, but got 1.
+
+[7m62[0m     this.stripe = new Stripe(config.secretKey);
+[7m  [0m [91m                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/stripe/types/index.d.ts[0m:[93m228[0m:[93m33[0m
+    [7m228[0m     constructor(apiKey: string, config: Stripe.StripeConfig);
+    [7m   [0m [96m                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    An argument for 'config' was not provided.
+[96msrc/modules/payments/payment.service.ts[0m:[93m85[0m:[93m7[0m - [91merror[0m[90m TS2345: [0mArgument of type '(manager: EntityManager) => Promise<PaymentEntity>' is not assignable to parameter of type 'IsolationLevel'.
+
+[7m85[0m       async (manager: EntityManager) => {
+[7m  [0m [91m      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m117[0m:[93m40[0m - [91merror[0m[90m TS18046: [0m'stripeError' is of type 'unknown'.
+
+[7m117[0m               `Stripe charge failed: ${stripeError.message}`,
+[7m   [0m [91m                                       ~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m118[0m:[93m15[0m - [91merror[0m[90m TS18046: [0m'stripeError' is of type 'unknown'.
+
+[7m118[0m               stripeError.stack,
+[7m   [0m [91m              ~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m122[0m:[93m15[0m - [91merror[0m[90m TS18046: [0m'stripeError' is of type 'unknown'.
+
+[7m122[0m               stripeError.message || 'Payment processing failed',
+[7m   [0m [91m              ~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m127[0m:[93m35[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  Overload 1 of 2, '(entityClass: EntityTarget<PaymentEntity>, plainObject?: DeepPartial<PaymentEntity> | undefined): PaymentEntity', gave the following error.
+    Object literal may only specify known properties, and 'total_amount' does not exist in type 'DeepPartial<PaymentEntity>'.
+  Overload 2 of 2, '(entityClass: EntityTarget<PaymentEntity>, plainObjects?: DeepPartial<PaymentEntity>[] | undefined): PaymentEntity[]', gave the following error.
+    Object literal may only specify known properties, and 'booking_id' does not exist in type 'DeepPartial<PaymentEntity>[]'.
+
+[7m127[0m           const payment = manager.create(PaymentEntity, {
+[7m   [0m [91m                                  ~~~~~~[0m
+
+[96msrc/modules/payments/payment.service.ts[0m:[93m144[0m:[93m19[0m - [91merror[0m[90m TS2339: [0mProperty 'payment_id' does not exist on type 'BookingEntity'.
+
+[7m144[0m           booking.payment_id = savedPayment.id;
+[7m   [0m [91m                  ~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m154[0m:[93m22[0m - [91merror[0m[90m TS2339: [0mProperty 'total_revenue' does not exist on type 'BusinessEntity'.
+
+[7m154[0m             business.total_revenue = (business.total_revenue || 0) + (amount / 100) * 0.9;
+[7m   [0m [91m                     ~~~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m154[0m:[93m48[0m - [91merror[0m[90m TS2339: [0mProperty 'total_revenue' does not exist on type 'BusinessEntity'.
+
+[7m154[0m             business.total_revenue = (business.total_revenue || 0) + (amount / 100) * 0.9;
+[7m   [0m [91m                                               ~~~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m155[0m:[93m22[0m - [91merror[0m[90m TS2339: [0mProperty 'pending_payout' does not exist on type 'BusinessEntity'.
+
+[7m155[0m             business.pending_payout = (business.pending_payout || 0) + (amount / 100) * 0.9;
+[7m   [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m155[0m:[93m49[0m - [91merror[0m[90m TS2339: [0mProperty 'pending_payout' does not exist on type 'BusinessEntity'.
+
+[7m155[0m             business.pending_payout = (business.pending_payout || 0) + (amount / 100) * 0.9;
+[7m   [0m [91m                                                ~~~~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m166[0m:[93m44[0m - [91merror[0m[90m TS18046: [0m'error' is of type 'unknown'.
+
+[7m166[0m             `Payment transaction failed: ${error.message}`,
+[7m   [0m [91m                                           ~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m167[0m:[93m13[0m - [91merror[0m[90m TS18046: [0m'error' is of type 'unknown'.
+
+[7m167[0m             error.stack,
+[7m   [0m [91m            ~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m189[0m:[93m7[0m - [91merror[0m[90m TS2345: [0mArgument of type '(manager: EntityManager) => Promise<void>' is not assignable to parameter of type 'IsolationLevel'.
+
+[7m189[0m       async (manager: EntityManager) => {
+[7m   [0m [91m      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m207[0m:[93m39[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  Overload 1 of 2, '(params?: RefundCreateParams | undefined, options?: RequestOptions | undefined): Promise<Response<Refund>>', gave the following error.
+    Type 'string' is not assignable to type 'Reason | undefined'.
+  Overload 2 of 2, '(options?: RequestOptions | undefined): Promise<Response<Refund>>', gave the following error.
+    Object literal may only specify known properties, and 'payment_intent' does not exist in type 'RequestOptions'.
+
+[7m207[0m             await this.stripe.refunds.create({
+[7m   [0m [91m                                      ~~~~~~[0m
+
+[96msrc/modules/payments/payment.service.ts[0m:[93m208[0m:[93m39[0m - [91merror[0m[90m TS2339: [0mProperty 'stripe_payment_id' does not exist on type 'PaymentEntity'.
+
+[7m208[0m               payment_intent: payment.stripe_payment_id,
+[7m   [0m [91m                                      ~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m212[0m:[93m49[0m - [91merror[0m[90m TS18046: [0m'stripeError' is of type 'unknown'.
+
+[7m212[0m             this.logger.error(`Refund failed: ${stripeError.message}`);
+[7m   [0m [91m                                                ~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m217[0m:[93m34[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  Overload 1 of 2, '(entityClass: EntityTarget<PaymentEntity>, plainObject?: DeepPartial<PaymentEntity> | undefined): PaymentEntity', gave the following error.
+    Object literal may only specify known properties, and 'payment_type' does not exist in type 'DeepPartial<PaymentEntity>'.
+  Overload 2 of 2, '(entityClass: EntityTarget<PaymentEntity>, plainObjects?: DeepPartial<PaymentEntity>[] | undefined): PaymentEntity[]', gave the following error.
+    Object literal may only specify known properties, and 'booking_id' does not exist in type 'DeepPartial<PaymentEntity>[]'.
+
+[7m217[0m           const refund = manager.create(PaymentEntity, {
+[7m   [0m [91m                                 ~~~~~~[0m
+
+[96msrc/modules/payments/payment.service.ts[0m:[93m224[0m:[93m50[0m - [91merror[0m[90m TS2339: [0mProperty 'stripe_payment_id' does not exist on type 'PaymentEntity'.
+
+[7m224[0m             stripe_payment_id: `refund_${payment.stripe_payment_id}`,
+[7m   [0m [91m                                                 ~~~~~~~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m256[0m:[93m22[0m - [91merror[0m[90m TS2339: [0mProperty 'total_revenue' does not exist on type 'BusinessEntity'.
+
+[7m256[0m             business.total_revenue = Math.max(
+[7m   [0m [91m                     ~~~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m258[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'total_revenue' does not exist on type 'BusinessEntity'.
+
+[7m258[0m               (business.total_revenue || 0) - payment.business_amount,
+[7m   [0m [91m                        ~~~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m258[0m:[93m55[0m - [91merror[0m[90m TS2339: [0mProperty 'business_amount' does not exist on type 'PaymentEntity'.
+
+[7m258[0m               (business.total_revenue || 0) - payment.business_amount,
+[7m   [0m [91m                                                      ~~~~~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m260[0m:[93m22[0m - [91merror[0m[90m TS2339: [0mProperty 'pending_payout' does not exist on type 'BusinessEntity'.
+
+[7m260[0m             business.pending_payout = Math.max(
+[7m   [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m262[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'pending_payout' does not exist on type 'BusinessEntity'.
+
+[7m262[0m               (business.pending_payout || 0) - payment.business_amount,
+[7m   [0m [91m                        ~~~~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m262[0m:[93m56[0m - [91merror[0m[90m TS2339: [0mProperty 'business_amount' does not exist on type 'PaymentEntity'.
+
+[7m262[0m               (business.pending_payout || 0) - payment.business_amount,
+[7m   [0m [91m                                                       ~~~~~~~~~~~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m271[0m:[93m59[0m - [91merror[0m[90m TS18046: [0m'error' is of type 'unknown'.
+
+[7m271[0m           this.logger.error(`Refund transaction failed: ${error.message}`);
+[7m   [0m [91m                                                          ~~~~~[0m
+[96msrc/modules/payments/payment.service.ts[0m:[93m288[0m:[93m7[0m - [91merror[0m[90m TS2345: [0mArgument of type '(manager: EntityManager) => Promise<void>' is not assignable to parameter of type 'IsolationLevelFound 439 error(s).
+
